@@ -1127,4 +1127,31 @@ body { line-height: 1.5; }
     width: 100%;
     justify-content: flex-start;
   }
+
+    .market-logo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .market-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+    .market-badge {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .service-badges {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
