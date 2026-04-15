@@ -166,8 +166,6 @@ const state = {
   wishlist: new Set(JSON.parse(localStorage.getItem("ssk-wishlist") || "[]"))
 };
 
-let detailSliderInterval = null;
-
 function $(selector, root = document) { return root.querySelector(selector); }
 function $all(selector, root = document) { return Array.from(root.querySelectorAll(selector)); }
 
@@ -182,131 +180,6 @@ function discountPercentage(price, oldPrice) {
 function whatsappLink(product) {
   const message = `Hello Shri Samarth Krupa Musical, I am interested in "${product.name}" (${formatPrice(product.price)}). Please share more details.`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-}
-
-
-function escapeXml(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-function wrapSvgText(text, maxChars = 18) {
-  const words = String(text).split(/\s+/).filter(Boolean);
-  const lines = [];
-  let current = "";
-
-  words.forEach(word => {
-    const next = current ? `${current} ${word}` : word;
-    if (next.length <= maxChars) {
-      current = next;
-    } else {
-      if (current) lines.push(current);
-      current = word;
-    }
-  });
-
-  if (current) lines.push(current);
-  return lines.slice(0, 3);
-}
-
-function promoSlideData(product, heading, lines) {
-  const headingLines = wrapSvgText(heading, 18);
-  const normalizedLines = lines.slice(0, 4);
-  const headingMarkup = headingLines.map((line, index) => `
-    <text x="84" y="${260 + index * 78}" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="800">${escapeXml(line)}</text>`).join("");
-  const infoMarkup = normalizedLines.map((line, index) => `
-    <text x="92" y="${560 + index * 70}" fill="rgba(255,255,255,0.92)" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">• ${escapeXml(line)}</text>`).join("");
-
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
-      <defs>
-        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#0f172a" />
-          <stop offset="55%" stop-color="#1d4ed8" />
-          <stop offset="100%" stop-color="#0f172a" />
-        </linearGradient>
-      </defs>
-      <rect width="1200" height="900" rx="36" fill="url(#g)"/>
-      <circle cx="1020" cy="120" r="200" fill="rgba(255,255,255,0.10)"/>
-      <circle cx="180" cy="760" r="220" fill="rgba(255,255,255,0.08)"/>
-      <rect x="84" y="82" width="270" height="54" rx="27" fill="rgba(255,255,255,0.14)"/>
-      <text x="118" y="118" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">${escapeXml(product.category)}</text>
-      ${headingMarkup}
-      <rect x="84" y="500" width="1030" height="300" rx="32" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.18)"/>
-      ${infoMarkup}
-      <text x="84" y="854" fill="rgba(255,255,255,0.88)" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Shri Samarth Krupa Musical</text>
-    </svg>`;
-
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-}
-
-function productGallerySlides(product) {
-  return [
-    { src: product.image, alt: `${product.name} photo` },
-    {
-      src: promoSlideData(product, product.name, [product.badge, formatPrice(product.price), `Save ${discountPercentage(product.price, product.oldPrice)}%`]),
-      alt: `${product.name} overview slide`
-    },
-    {
-      src: promoSlideData(product, "Product Highlights", product.highlights),
-      alt: `${product.name} highlights slide`
-    }
-  ];
-}
-
-function startDetailSlider(root) {
-  if (detailSliderInterval) clearInterval(detailSliderInterval);
-  if (!root) return;
-
-  const slides = $all(".detail-slide", root);
-  const dots = $all("[data-slide-to]", root);
-  const prev = $("[data-gallery-prev]", root);
-  const next = $("[data-gallery-next]", root);
-  let currentIndex = 0;
-
-  if (!slides.length) return;
-
-  function showSlide(index) {
-    currentIndex = (index + slides.length) % slides.length;
-    slides.forEach((slide, slideIndex) => slide.classList.toggle("active", slideIndex === currentIndex));
-    dots.forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === currentIndex));
-  }
-
-  function restartAutoSlide() {
-    if (detailSliderInterval) clearInterval(detailSliderInterval);
-    if (slides.length <= 1) return;
-    detailSliderInterval = setInterval(() => showSlide(currentIndex + 1), 3200);
-  }
-
-  dots.forEach((dot, dotIndex) => {
-    dot.addEventListener("click", () => {
-      showSlide(dotIndex);
-      restartAutoSlide();
-    });
-  });
-
-  if (prev) prev.addEventListener("click", () => {
-    showSlide(currentIndex - 1);
-    restartAutoSlide();
-  });
-
-  if (next) next.addEventListener("click", () => {
-    showSlide(currentIndex + 1);
-    restartAutoSlide();
-  });
-
-  root.addEventListener("mouseenter", () => {
-    if (detailSliderInterval) clearInterval(detailSliderInterval);
-  });
-
-  root.addEventListener("mouseleave", restartAutoSlide);
-
-  showSlide(0);
-  restartAutoSlide();
 }
 
 function saveWishlist() {
@@ -564,26 +437,10 @@ function renderDetailPage() {
 
   const product = PRODUCTS.find(item => item.id === state.selectedId) || PRODUCTS[0];
   const inWishlist = state.wishlist.has(product.id);
-  const slides = productGallerySlides(product);
 
   root.innerHTML = `
     <div class="detail-grid">
-      <div class="detail-gallery">
-        <div class="detail-slides">
-          ${slides.map((slide, index) => `
-            <div class="detail-slide ${index === 0 ? "active" : ""}">
-              <img src="${slide.src}" alt="${slide.alt}" ${index === 0 ? "fetchpriority="high"" : "loading="lazy""}>
-            </div>
-          `).join("")}
-        </div>
-        <div class="detail-gallery-controls">
-          <button class="detail-arrow" type="button" data-gallery-prev aria-label="Previous image">‹</button>
-          <div class="detail-dots">
-            ${slides.map((_, index) => `<button class="detail-dot ${index === 0 ? "active" : ""}" type="button" data-slide-to="${index}" aria-label="Go to slide ${index + 1}"></button>`).join("")}
-          </div>
-          <button class="detail-arrow" type="button" data-gallery-next aria-label="Next image">›</button>
-        </div>
-      </div>
+      <div class="detail-image"><img src="${product.image}" alt="${product.name}"></div>
       <div>
         <span class="badge-soft">${product.badge}</span>
         <h1 class="detail-title">${product.name}</h1>
@@ -608,8 +465,6 @@ function renderDetailPage() {
 
   const wishlistBtn = $("#detailWishlistBtn");
   if (wishlistBtn) wishlistBtn.addEventListener("click", () => toggleWishlist(product.id));
-
-  startDetailSlider($(".detail-gallery", root));
 }
 
 function renderRelatedProducts() {
@@ -649,9 +504,4 @@ window.addEventListener("DOMContentLoaded", () => {
   initCategoriesPage();
   initProductsPage();
   initDetailsPage();
-});
-
-
-window.addEventListener("beforeunload", () => {
-  if (detailSliderInterval) clearInterval(detailSliderInterval);
 });
