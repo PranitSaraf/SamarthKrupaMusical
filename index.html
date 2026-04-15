@@ -5,286 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shri Samarth Krupa Musical</title>
   <meta name="description" content="Modern product showcase website for Shri Samarth Krupa Musical" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg fixed-top app-navbar">
-    <div class="container py-2">
-      <a class="navbar-brand brand" href="#home">
-        <span class="brand-mark"><i class="bi bi-music-note-beamed"></i></span>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">♫</span>
         <span>Shri Samarth Krupa Musical</span>
       </a>
 
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 me-lg-3">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#details">Details</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-
-        <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
-          <button class="icon-btn" id="wishlistNavBtn" type="button" title="Wishlist">
-            <i class="bi bi-heart"></i>
-            <span class="badge rounded-pill text-bg-danger" id="wishlistCount">0</span>
-          </button>
-          <button class="icon-btn" id="catalogOnlyBtn" type="button" title="Catalog Only">
-            <i class="bi bi-bag"></i>
-            <span class="badge rounded-pill text-bg-primary">0</span>
-          </button>
+      <div class="nav-menu">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="categories.html" data-page="categories">Categories</a></li>
+            <li><a href="products.html" data-page="products">Products</a></li>
+            <li><a href="details.html" data-page="details">Details</a></li>
+            <li><a href="contact.html" data-page="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" title="Wishlist"><span>♡</span><span class="count red" data-wishlist-count>0</span></button>
+          <button class="icon-btn" id="catalogOnlyBtn" title="Display only"><span>👜</span><span class="count blue">0</span></button>
         </div>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <main id="home" class="page-top-space">
-    <section class="container">
-      <div id="heroCarousel" class="carousel slide hero-shell" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-        </div>
-
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="hero-slide slide-one">
-              <div class="container hero-content">
-                <span class="hero-chip"><i class="bi bi-stars"></i> Premium product showcase</span>
-                <h1 class="hero-title">Display your musical products with a modern catalog experience.</h1>
-                <p class="hero-copy">A unique storefront-style website with category browsing, product filters, wishlist, detailed product view, and direct WhatsApp inquiries.</p>
-                <div class="d-flex flex-wrap gap-3">
-                  <a href="#products" class="btn btn-light btn-lg rounded-4 fw-bold px-4">Browse Products</a>
-                  <a href="#contact" class="btn btn-outline-light btn-lg rounded-4 fw-bold px-4">Contact Store</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="hero-slide slide-two">
-              <div class="container hero-content">
-                <span class="hero-chip"><i class="bi bi-soundwave"></i> Minimal modern design</span>
-                <h2 class="hero-title">Built for discovery, not checkout.</h2>
-                <p class="hero-copy">Your visitors can explore harmoniums, tablas, keyboards, guitars, dholaks, and accessories, then message you directly on WhatsApp.</p>
-                <div class="d-flex flex-wrap gap-3">
-                  <a href="#categories" class="btn btn-light btn-lg rounded-4 fw-bold px-4">View Categories</a>
-                  <a href="#details" class="btn btn-outline-light btn-lg rounded-4 fw-bold px-4">Open Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="hero-slide slide-three">
-              <div class="container hero-content">
-                <span class="hero-chip"><i class="bi bi-whatsapp"></i> Direct customer inquiry</span>
-                <h2 class="hero-title">Let customers shortlist and message you instantly.</h2>
-                <p class="hero-copy">Every product includes a product-specific WhatsApp inquiry link with the product name already filled into the message.</p>
-                <div class="d-flex flex-wrap gap-3">
-                  <a href="#products" class="btn btn-light btn-lg rounded-4 fw-bold px-4">Start Shopping</a>
-                  <a href="#contact" class="btn btn-outline-light btn-lg rounded-4 fw-bold px-4">WhatsApp Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </section>
-
-    <section class="section-space">
+  <main>
+    <section class="page-hero">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-sm-6 col-xl-3">
-            <div class="stat-card">
-              <h3>12</h3>
-              <p>Sample real-image products</p>
+        <div class="hero-shell">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <span class="hero-chip">✨ Premium product showcase</span>
+              <h1 class="hero-title">Display your musical products with a modern catalog experience.</h1>
+              <p class="hero-copy">A unique storefront-style website with category browsing, product filters, wishlist, detailed product view, and direct WhatsApp inquiries.</p>
+              <div class="hero-actions">
+                <a class="btn btn-light" href="products.html">Browse Products</a>
+                <a class="btn btn-outline" href="contact.html">Contact Store</a>
+              </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <div class="stat-card">
-              <h3>6</h3>
-              <p>Musical categories</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <div class="stat-card">
-              <h3>100%</h3>
-              <p>Responsive layout</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <div class="stat-card">
-              <h3>Direct</h3>
-              <p>WhatsApp inquiry flow</p>
+
+            <div class="hero-card">
+              <h2>Why this version works</h2>
+              <p class="hero-copy">It is now built as real separate files, so the CSS and JavaScript load correctly and the products render properly.</p>
+              <div class="hero-card-grid">
+                <div class="hero-mini">
+                  <h3>5 Pages</h3>
+                  <p>Home, categories, products, details, contact</p>
+                </div>
+                <div class="hero-mini">
+                  <h3>12</h3>
+                  <p>Sample products with public images</p>
+                </div>
+                <div class="hero-mini">
+                  <h3>100%</h3>
+                  <p>Responsive on mobile and desktop</p>
+                </div>
+                <div class="hero-mini">
+                  <h3>Direct</h3>
+                  <p>WhatsApp inquiry flow only</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="categories" class="section-space pt-0">
+    <section class="section compact">
+      <div class="container grid grid-4">
+        <div class="stat-card"><h3>12</h3><p>Sample products with images</p></div>
+        <div class="stat-card"><h3>6</h3><p>Musical categories</p></div>
+        <div class="stat-card"><h3>Separate</h3><p>Dedicated page for each main section</p></div>
+        <div class="stat-card"><h3>Direct</h3><p>WhatsApp inquiry buttons on every product</p></div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="eyebrow">Categories</span>
             <h2 class="section-title">Shop by instrument type</h2>
-            <p class="section-copy">Marketplace-style browsing with a cleaner, more premium presentation for your store.</p>
+            <p class="section-copy">Clean category blocks with direct links to filtered catalog pages.</p>
           </div>
-          <a href="#products" class="btn btn-soft">Go to catalog</a>
+          <a class="btn btn-soft" href="categories.html">Open categories</a>
         </div>
-        <div class="row g-3" id="categoryPills"></div>
+        <div class="grid grid-categories" id="homeCategories"></div>
       </div>
     </section>
 
-    <section id="products" class="section-space pt-0">
+    <section class="section">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Catalog</span>
-            <h2 class="section-title">Browse products</h2>
-            <p class="section-copy">Search, filter, sort, save favorites, and open product details before contacting you on WhatsApp.</p>
+            <span class="eyebrow">Featured products</span>
+            <h2 class="section-title">Popular items from your catalog</h2>
+            <p class="section-copy">Visitors can view details or message you directly for each product.</p>
           </div>
-          <button class="btn btn-soft d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileFilters">
-            <i class="bi bi-sliders me-2"></i>Filters
-          </button>
+          <a class="btn btn-soft" href="products.html">Full catalog</a>
         </div>
-
-        <div class="row g-4">
-          <div class="col-lg-3 d-none d-lg-block">
-            <div class="panel filter-panel sticky-panel">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5 class="mb-0 fw-bold">Filters</h5>
-                <button class="btn btn-link p-0 text-decoration-none" id="clearFiltersDesktop">Clear all</button>
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label fw-semibold">Search</label>
-                <input class="form-control" id="searchDesktop" type="text" placeholder="Search products..." />
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label fw-semibold">Category</label>
-                <select class="form-select" id="categoryDesktop"></select>
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label fw-semibold d-flex justify-content-between">
-                  <span>Maximum price</span>
-                  <span id="priceLabelDesktop">₹50,000</span>
-                </label>
-                <input class="form-range" id="priceDesktop" type="range" min="2000" max="50000" step="500" value="50000" />
-              </div>
-
-              <div>
-                <label class="form-label fw-semibold">Sort by</label>
-                <select class="form-select" id="sortDesktop">
-                  <option value="featured">Featured</option>
-                  <option value="priceLowHigh">Price: Low to High</option>
-                  <option value="priceHighLow">Price: High to Low</option>
-                  <option value="nameAZ">Name: A to Z</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-9">
-            <div class="results-bar">
-              <div>
-                <div class="fw-bold" id="resultsText">Showing 0 products</div>
-                <div class="small text-secondary">Wishlist items: <span id="wishlistText">0</span> • Cart icon is for display only</div>
-              </div>
-              <div class="d-flex gap-2 flex-wrap">
-                <button class="btn btn-soft" id="wishlistOnlyBtn"><i class="bi bi-heart me-2"></i>Wishlist only</button>
-                <a href="#details" class="btn btn-soft"><i class="bi bi-box-arrow-up-right me-2"></i>Selected details</a>
-              </div>
-            </div>
-
-            <div class="row g-4" id="productGrid"></div>
-          </div>
-        </div>
+        <div class="product-grid" id="featuredProducts"></div>
       </div>
     </section>
 
-    <section id="details" class="section-space pt-0">
+    <section class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Product details</span>
-            <h2 class="section-title">Focused detail view</h2>
-            <p class="section-copy">Click any product card to update this section with a larger preview, highlights, and inquiry action.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">▦</div>
+            <h3>Marketplace-style structure</h3>
+            <p>Hero banner, categories, filterable catalog, and a focused product details page.</p>
           </div>
-        </div>
-        <div class="panel detail-panel">
-          <div class="row g-4 align-items-stretch" id="detailContent"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-space pt-0">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-              <div class="info-icon"><i class="bi bi-grid"></i></div>
-              <h5 class="fw-bold">Marketplace-style structure</h5>
-              <p class="text-secondary mb-0">Hero banner, categories, filterable catalog, detailed product section, and conversion-focused inquiry actions.</p>
-            </div>
+          <div class="info-card">
+            <div class="info-icon">📱</div>
+            <h3>Responsive layout</h3>
+            <p>The design works across laptops, tablets, and phones with a mobile menu and flexible grids.</p>
           </div>
-          <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-              <div class="info-icon"><i class="bi bi-phone"></i></div>
-              <h5 class="fw-bold">Fully responsive experience</h5>
-              <p class="text-secondary mb-0">Built for mobile, tablet, and desktop with offcanvas filters and touch-friendly cards and buttons.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-              <div class="info-icon"><i class="bi bi-whatsapp"></i></div>
-              <h5 class="fw-bold">No checkout required</h5>
-              <p class="text-secondary mb-0">Your customer browses products and then contacts you directly through WhatsApp with product-specific intent.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section-space pt-0">
-      <div class="container">
-        <div class="contact-shell">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-7">
-              <span class="hero-chip mb-3"><i class="bi bi-headset"></i> Direct contact</span>
-              <h2 class="section-title text-white mb-3">Want to ask about availability or pricing?</h2>
-              <p class="contact-copy mb-0">This website is designed to display products beautifully and guide customers to message you directly for buying or inquiry.</p>
-            </div>
-            <div class="col-lg-5">
-              <div class="contact-card">
-                <div class="small text-uppercase text-primary fw-bold mb-2">Store Contact</div>
-                <h4 class="fw-bold mb-2">Shri Samarth Krupa Musical</h4>
-                <p class="text-secondary mb-3">Display catalog website with direct WhatsApp inquiry</p>
-                <div class="d-grid gap-2">
-                  <a class="btn btn-success btn-lg rounded-4 fw-bold" target="_blank" rel="noopener" href="https://wa.me/918308651469?text=Hello%20Shri%20Samarth%20Krupa%20Musical%2C%20I%20want%20to%20know%20more%20about%20your%20products.">
-                    <i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp
-                  </a>
-                  <a class="btn btn-soft" href="#products">Back to products</a>
-                </div>
-              </div>
-            </div>
+          <div class="info-card">
+            <div class="info-icon">💬</div>
+            <h3>No checkout required</h3>
+            <p>Customers explore your products and contact you directly on WhatsApp instead of adding to cart.</p>
           </div>
         </div>
       </div>
@@ -292,67 +138,17 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-lg-center">
+    <div class="container footer-inner">
       <div>© 2026 Shri Samarth Krupa Musical. Product display website.</div>
-      <div class="d-flex gap-3">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileFilters">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title fw-bold">Filters</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="mb-3">
-        <label class="form-label fw-semibold">Search</label>
-        <input class="form-control" id="searchMobile" type="text" placeholder="Search products..." />
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label fw-semibold">Category</label>
-        <select class="form-select" id="categoryMobile"></select>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label fw-semibold d-flex justify-content-between">
-          <span>Maximum price</span>
-          <span id="priceLabelMobile">₹50,000</span>
-        </label>
-        <input class="form-range" id="priceMobile" type="range" min="2000" max="50000" step="500" value="50000" />
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label fw-semibold">Sort by</label>
-        <select class="form-select" id="sortMobile">
-          <option value="featured">Featured</option>
-          <option value="priceLowHigh">Price: Low to High</option>
-          <option value="priceHighLow">Price: High to Low</option>
-          <option value="nameAZ">Name: A to Z</option>
-        </select>
-      </div>
-
-      <div class="d-grid gap-2">
-        <button class="btn btn-brand" id="applyMobileFilters" data-bs-dismiss="offcanvas">Apply Filters</button>
-        <button class="btn btn-soft" id="clearFiltersMobile">Clear all</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="position-fixed bottom-0 end-0 p-3 toast-wrap">
-    <div id="catalogToast" class="toast border-0 shadow" role="alert">
-      <div class="d-flex">
-        <div class="toast-body fw-semibold">This is a display-only website. Customers contact you on WhatsApp.</div>
-        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="toast" id="toast"></div>
   <script src="script.js"></script>
 </body>
 </html>

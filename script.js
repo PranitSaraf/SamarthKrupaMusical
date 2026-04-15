@@ -1,6 +1,6 @@
 const WHATSAPP_NUMBER = "918308651469";
 
-const products = [
+const PRODUCTS = [
   {
     id: 1,
     name: "Swaranjali Classic Harmonium",
@@ -11,19 +11,19 @@ const products = [
     description: "Traditional harmonium with warm tonal character for devotional and classical use.",
     longDescription: "A premium-looking harmonium suited for bhajans, home practice, and stage performance. Designed for a polished product showcase with a rich wooden look and elegant front profile.",
     highlights: ["Smooth key response", "Portable folding body", "Ideal for devotional music"],
-    image: "https://images.unsplash.com/photo-1542751695-046658ec66b8?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 2,
-    name: "Mehfil Floral Harmonium",
+    name: "Mehfil Deluxe Harmonium",
     category: "Harmonium",
     price: 22999,
     oldPrice: 25999,
     badge: "Premium",
-    description: "Decorative harmonium styling with a vibrant premium visual presentation.",
-    longDescription: "A visually rich harmonium option for customers looking for a musical instrument with elegant decorative appeal. Great for showroom display, gifts, and devotional performance setups.",
-    highlights: ["Premium visual appeal", "Elegant floral setup", "Showroom-ready presentation"],
-    image: "https://images.unsplash.com/photo-1643287928605-b8e1190615fa?auto=format&fit=crop&w=1200&q=80"
+    description: "Decorative harmonium styling with a premium visual presentation.",
+    longDescription: "A visually rich harmonium option for customers looking for an instrument with elegant decorative appeal. Great for showroom display, gifts, and devotional performance setups.",
+    highlights: ["Premium visual appeal", "Elegant body design", "Showroom-ready presentation"],
+    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const products = [
     description: "Classic tabla pair with clear dayan response and strong bayan depth.",
     longDescription: "A refined tabla set suitable for learners and intermediate players who want a polished appearance and balanced tonal response for regular riyaz and live presentation.",
     highlights: ["Balanced sound character", "Performance-ready look", "Traditional percussion appeal"],
-    image: "https://images.unsplash.com/photo-1771718968046-6b8cee870812?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const products = [
     description: "Premium tabla styling with strong stage presence and handcrafted detail.",
     longDescription: "Designed for players who want a more premium visual impression with dependable sound feel. A polished product for classical music lovers and serious performers.",
     highlights: ["Stage-friendly look", "Premium percussion styling", "Suitable for advanced players"],
-    image: "https://images.unsplash.com/photo-1771718968046-6b8cee870812?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const products = [
     description: "Compact keyboard for music classes, home practice, and learner setups.",
     longDescription: "A practical keyboard choice for students and hobby musicians. Its clean design makes it easy to present as a catalog item for educational and personal music use.",
     highlights: ["Beginner friendly", "Clean modern design", "Great for home use"],
-    image: "https://images.unsplash.com/photo-1755529523637-645b0b5c9aba?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ const products = [
     description: "Performance-style keyboard with a premium stage-ready presentation.",
     longDescription: "A more advanced keyboard option for customers who want a product that looks substantial, premium, and suitable for studio or live-performance environments.",
     highlights: ["Stage-ready styling", "Premium presentation", "Ideal for serious users"],
-    image: "https://images.unsplash.com/photo-1755529523637-645b0b5c9aba?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 7,
@@ -83,7 +83,7 @@ const products = [
     description: "Warm-toned acoustic guitar for beginners, students, and home practice.",
     longDescription: "A comfortable entry-level acoustic guitar with a clean natural finish. Perfect for music classes, gifting, and customers starting their playing journey.",
     highlights: ["Comfortable body shape", "Natural acoustic look", "Beginner friendly"],
-    image: "https://images.unsplash.com/photo-1750565489375-bd1085122369?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 8,
@@ -95,7 +95,7 @@ const products = [
     description: "Modern acoustic guitar styling with a clean premium finish and broad appeal.",
     longDescription: "A stylish guitar for catalog presentation, suitable for learners, casual performers, and customers who prefer a more premium visual finish in an acoustic instrument.",
     highlights: ["Modern display appeal", "Versatile use case", "Premium finish look"],
-    image: "https://images.unsplash.com/photo-1750565489375-bd1085122369?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 9,
@@ -107,7 +107,7 @@ const products = [
     description: "Traditional hand drum style for folk, bhajan, and festive performances.",
     longDescription: "A compact dholak-style product with strong visual appeal for devotional gatherings, festive programs, and live folk music settings.",
     highlights: ["Folk performance ready", "Portable body", "Great for festive use"],
-    image: "https://images.unsplash.com/photo-1716505681151-468d09e6352d?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 10,
@@ -119,7 +119,7 @@ const products = [
     description: "Handheld drum look with a strong performance vibe and traditional identity.",
     longDescription: "A more premium dholak-style showcase item intended for performers and customers who want a compact rhythmic instrument with character and visual charm.",
     highlights: ["Traditional rhythm look", "Performance-friendly feel", "Compact and striking"],
-    image: "https://images.unsplash.com/photo-1716505681151-468d09e6352d?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 11,
@@ -131,11 +131,11 @@ const products = [
     description: "Elegant microphone stand setup for stage, events, and vocal practice spaces.",
     longDescription: "A useful accessory item that rounds out your music catalog. Ideal for singers, public performances, rehearsal rooms, and event setups.",
     highlights: ["Stage-ready design", "Useful accessory item", "Ideal for singers and events"],
-    image: "https://images.unsplash.com/photo-1629327896333-7ecec1515ae5?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: 12,
-    name: "Studio Podcast Microphone",
+    name: "Studio Vocal Microphone",
     category: "Musical Accessories",
     price: 3999,
     oldPrice: 4699,
@@ -143,132 +143,173 @@ const products = [
     description: "Studio-style microphone accessory for recording, vocals, and content creators.",
     longDescription: "A polished audio accessory for users who want a professional-looking microphone for singing practice, podcasting, or studio display setups.",
     highlights: ["Studio recording look", "Premium accessory option", "Good for creators and vocals"],
-    image: "https://images.unsplash.com/photo-1627667049482-dd134b1f6366?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?auto=format&fit=crop&w=1200&q=80"
   }
 ];
 
-const categories = ["All", "Harmonium", "Tabla", "Keyboard", "Guitar", "Dholak", "Musical Accessories"];
+const CATEGORIES = [
+  { name: "Harmonium", icon: "🎹", copy: "Traditional reed instruments for bhajan and classical music." },
+  { name: "Tabla", icon: "🥁", copy: "Classical hand percussion for practice, stage, and teaching." },
+  { name: "Keyboard", icon: "⌨️", copy: "Portable and performance-style keyboards for all levels." },
+  { name: "Guitar", icon: "🎸", copy: "Acoustic guitars for learners, hobby players, and performers." },
+  { name: "Dholak", icon: "🪘", copy: "Rhythmic folk instruments for festive and devotional settings." },
+  { name: "Musical Accessories", icon: "🎤", copy: "Useful add-ons like microphones, stands, and support gear." }
+];
 
 const state = {
-  search: "",
   category: "All",
+  search: "",
   maxPrice: 50000,
   sort: "featured",
-  selectedId: 1,
   wishlistOnly: false,
-  wishlist: new Set()
+  selectedId: 1,
+  wishlist: new Set(JSON.parse(localStorage.getItem("ssk-wishlist") || "[]"))
 };
 
-const categoryPills = document.getElementById("categoryPills");
-const productGrid = document.getElementById("productGrid");
-const resultsText = document.getElementById("resultsText");
-const wishlistCount = document.getElementById("wishlistCount");
-const wishlistText = document.getElementById("wishlistText");
-const detailContent = document.getElementById("detailContent");
-const wishlistOnlyBtn = document.getElementById("wishlistOnlyBtn");
-
-const searchDesktop = document.getElementById("searchDesktop");
-const categoryDesktop = document.getElementById("categoryDesktop");
-const priceDesktop = document.getElementById("priceDesktop");
-const priceLabelDesktop = document.getElementById("priceLabelDesktop");
-const sortDesktop = document.getElementById("sortDesktop");
-
-const searchMobile = document.getElementById("searchMobile");
-const categoryMobile = document.getElementById("categoryMobile");
-const priceMobile = document.getElementById("priceMobile");
-const priceLabelMobile = document.getElementById("priceLabelMobile");
-const sortMobile = document.getElementById("sortMobile");
-
-const catalogToast = new bootstrap.Toast(document.getElementById("catalogToast"));
-
-document.getElementById("catalogOnlyBtn").addEventListener("click", () => catalogToast.show());
-document.getElementById("wishlistNavBtn").addEventListener("click", () => {
-  state.wishlistOnly = !state.wishlistOnly;
-  syncInputs();
-  renderProducts();
-  document.getElementById("products").scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("clearFiltersDesktop").addEventListener("click", resetFilters);
-document.getElementById("clearFiltersMobile").addEventListener("click", resetFilters);
-document.getElementById("applyMobileFilters").addEventListener("click", renderProducts);
-
-wishlistOnlyBtn.addEventListener("click", () => {
-  state.wishlistOnly = !state.wishlistOnly;
-  syncInputs();
-  renderProducts();
-});
+function $(selector, root = document) { return root.querySelector(selector); }
+function $all(selector, root = document) { return Array.from(root.querySelectorAll(selector)); }
 
 function formatPrice(value) {
-  return new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0
-  }).format(value);
+  return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(value);
 }
 
 function discountPercentage(price, oldPrice) {
   return Math.round(((oldPrice - price) / oldPrice) * 100);
 }
 
-function buildWhatsAppLink(product) {
+function whatsappLink(product) {
   const message = `Hello Shri Samarth Krupa Musical, I am interested in "${product.name}" (${formatPrice(product.price)}). Please share more details.`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-function syncInputs() {
-  searchDesktop.value = state.search;
-  searchMobile.value = state.search;
-  categoryDesktop.value = state.category;
-  categoryMobile.value = state.category;
-  priceDesktop.value = state.maxPrice;
-  priceMobile.value = state.maxPrice;
-  sortDesktop.value = state.sort;
-  sortMobile.value = state.sort;
-  priceLabelDesktop.textContent = formatPrice(state.maxPrice);
-  priceLabelMobile.textContent = formatPrice(state.maxPrice);
-  wishlistCount.textContent = state.wishlist.size;
-  wishlistText.textContent = state.wishlist.size;
-
-  wishlistOnlyBtn.classList.toggle("btn-brand", state.wishlistOnly);
-  wishlistOnlyBtn.classList.toggle("btn-soft", !state.wishlistOnly);
-  wishlistOnlyBtn.innerHTML = state.wishlistOnly
-    ? '<i class="bi bi-heart-fill me-2"></i>Showing wishlist'
-    : '<i class="bi bi-heart me-2"></i>Wishlist only';
+function saveWishlist() {
+  localStorage.setItem("ssk-wishlist", JSON.stringify([...state.wishlist]));
+  updateWishlistUI();
 }
 
-function renderCategoryOptions() {
-  const options = categories.map(item => `<option value="${item}">${item}</option>`).join("");
-  categoryDesktop.innerHTML = options;
-  categoryMobile.innerHTML = options;
+function updateWishlistUI() {
+  $all("[data-wishlist-count]").forEach(el => { el.textContent = state.wishlist.size; });
 }
 
-function renderCategoryPills() {
-  categoryPills.innerHTML = categories.slice(1).map(category => `
-    <div class="col-6 col-md-4 col-xl-2">
-      <button class="category-pill ${state.category === category ? "active" : ""}" data-category="${category}">
-        <i class="bi bi-vinyl"></i>
-        <span>${category}</span>
-      </button>
-    </div>
-  `).join("");
+function getQueryParams() {
+  return new URLSearchParams(window.location.search);
+}
 
-  categoryPills.querySelectorAll("[data-category]").forEach(button => {
-    button.addEventListener("click", () => {
-      state.category = button.dataset.category;
-      state.wishlistOnly = false;
-      syncInputs();
-      renderCategoryPills();
-      renderProducts();
-      document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+function setActiveNav() {
+  const page = document.body.dataset.page;
+  $all(".nav-links a").forEach(link => {
+    if (link.dataset.page === page) link.classList.add("active");
+  });
+}
+
+function initNav() {
+  const toggle = $(".nav-toggle");
+  const menu = $(".nav-menu");
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => menu.classList.toggle("open"));
+  }
+}
+
+function showToast(message) {
+  const toast = $("#toast");
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => toast.classList.remove("show"), 2200);
+}
+
+function attachCatalogButton() {
+  const btn = $("#catalogOnlyBtn");
+  if (!btn) return;
+  btn.addEventListener("click", () => showToast("This is a display-only website. Customers contact you on WhatsApp."));
+}
+
+function renderCategoryCards(selector) {
+  const container = $(selector);
+  if (!container) return;
+  container.innerHTML = CATEGORIES.map(category => {
+    const count = PRODUCTS.filter(item => item.category === category.name).length;
+    return `
+      <a class="category-card" href="products.html?category=${encodeURIComponent(category.name)}">
+        <div class="category-icon">${category.icon}</div>
+        <h3>${category.name}</h3>
+        <p>${category.copy}</p>
+        <div class="category-meta">
+          <span>${count} products</span>
+          <span>View catalog →</span>
+        </div>
+      </a>
+    `;
+  }).join("");
+}
+
+function toggleWishlist(productId) {
+  if (state.wishlist.has(productId)) {
+    state.wishlist.delete(productId);
+    showToast("Removed from wishlist");
+  } else {
+    state.wishlist.add(productId);
+    showToast("Saved to wishlist");
+  }
+  saveWishlist();
+  renderProductsPage();
+  renderFeaturedProducts();
+  renderRelatedProducts();
+  renderDetailPage();
+}
+
+function productCard(product) {
+  const inWishlist = state.wishlist.has(product.id);
+  return `
+    <article class="product-card">
+      <div class="product-media">
+        <img src="${product.image}" alt="${product.name}" loading="lazy">
+        <button class="wishlist-btn ${inWishlist ? "active" : ""}" data-wishlist-id="${product.id}" aria-label="Save to wishlist">${inWishlist ? "♥" : "♡"}</button>
+      </div>
+      <div class="product-body">
+        <div class="product-top">
+          <span class="badge-soft">${product.badge}</span>
+          <span class="product-category">${product.category}</span>
+        </div>
+        <h3 class="product-title">${product.name}</h3>
+        <p class="product-desc">${product.description}</p>
+        <div class="price-row">
+          <span class="price">${formatPrice(product.price)}</span>
+          <span class="old-price">${formatPrice(product.oldPrice)}</span>
+          <span class="discount">${discountPercentage(product.price, product.oldPrice)}% off</span>
+        </div>
+        <div class="card-actions">
+          <a class="btn btn-soft" href="details.html?id=${product.id}">View details</a>
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="${whatsappLink(product)}">WhatsApp inquiry</a>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function wireWishlistButtons(root = document) {
+  $all("[data-wishlist-id]", root).forEach(button => {
+    button.addEventListener("click", event => {
+      event.preventDefault();
+      toggleWishlist(Number(button.dataset.wishlistId));
     });
   });
 }
 
-function getFilteredProducts() {
-  const query = state.search.trim().toLowerCase();
+function applyQueryStateFromUrl() {
+  const params = getQueryParams();
+  const category = params.get("category");
+  const search = params.get("search");
+  const detailId = params.get("id");
+  if (category) state.category = category;
+  if (search) state.search = search;
+  if (detailId) state.selectedId = Number(detailId);
+}
 
-  const filtered = products.filter(product => {
+function filteredProducts() {
+  const query = state.search.trim().toLowerCase();
+  const list = PRODUCTS.filter(product => {
     const haystack = `${product.name} ${product.category} ${product.description} ${product.longDescription}`.toLowerCase();
     const matchesSearch = !query || haystack.includes(query);
     const matchesCategory = state.category === "All" || product.category === state.category;
@@ -279,167 +320,188 @@ function getFilteredProducts() {
 
   switch (state.sort) {
     case "priceLowHigh":
-      filtered.sort((a, b) => a.price - b.price);
+      list.sort((a, b) => a.price - b.price);
       break;
     case "priceHighLow":
-      filtered.sort((a, b) => b.price - a.price);
+      list.sort((a, b) => b.price - a.price);
       break;
     case "nameAZ":
-      filtered.sort((a, b) => a.name.localeCompare(b.name));
+      list.sort((a, b) => a.name.localeCompare(b.name));
       break;
     default:
-      filtered.sort((a, b) => a.id - b.id);
+      list.sort((a, b) => a.id - b.id);
   }
-
-  return filtered;
+  return list;
 }
 
-function renderProducts() {
-  const filtered = getFilteredProducts();
-  resultsText.textContent = `Showing ${filtered.length} product${filtered.length === 1 ? "" : "s"}`;
+function renderFeaturedProducts() {
+  const grid = $("#featuredProducts");
+  if (!grid) return;
+  grid.innerHTML = PRODUCTS.slice(0, 6).map(productCard).join("");
+  wireWishlistButtons(grid);
+}
 
-  if (!filtered.length) {
-    productGrid.innerHTML = `
-      <div class="col-12">
-        <div class="empty-state">
-          <h5 class="fw-bold mb-2">No products found</h5>
-          <p class="mb-3">Try changing your search, category, or price filter.</p>
-          <button class="btn btn-brand" onclick="resetFilters()">Reset filters</button>
-        </div>
-      </div>`;
+function renderProductsPage() {
+  const grid = $("#productGrid");
+  if (!grid) return;
+
+  const resultsText = $("#resultsText");
+  const wishlistText = $("#wishlistText");
+  const list = filteredProducts();
+
+  if (resultsText) {
+    resultsText.textContent = `Showing ${list.length} product${list.length === 1 ? "" : "s"}`;
+  }
+  if (wishlistText) {
+    wishlistText.textContent = state.wishlist.size;
+  }
+
+  if (!list.length) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <h3>No products found</h3>
+        <p>Try changing search, category, or price filters.</p>
+        <button class="btn btn-primary" id="resetFiltersBtn">Reset filters</button>
+      </div>
+    `;
+    const resetBtn = $("#resetFiltersBtn");
+    if (resetBtn) resetBtn.addEventListener("click", resetFilters);
     return;
   }
 
-  productGrid.innerHTML = filtered.map(product => `
-    <div class="col-sm-6 col-xl-4">
-      <article class="product-card" role="button" tabindex="0" data-product-id="${product.id}">
-        <div class="product-media">
-          <img src="${product.image}" alt="${product.name}">
-          <button class="wishlist-btn ${state.wishlist.has(product.id) ? "active" : ""}" data-wishlist-id="${product.id}" aria-label="Add to wishlist">
-            <i class="bi ${state.wishlist.has(product.id) ? "bi-heart-fill" : "bi-heart"}"></i>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-            <span class="badge-soft">${product.badge}</span>
-            <span class="product-category">${product.category}</span>
-          </div>
-          <h3 class="product-title">${product.name}</h3>
-          <p class="product-desc">${product.description}</p>
-          <div class="price-row">
-            <span class="price">${formatPrice(product.price)}</span>
-            <span class="old-price">${formatPrice(product.oldPrice)}</span>
-            <span class="discount">${discountPercentage(product.price, product.oldPrice)}% off</span>
-          </div>
-          <div class="d-grid gap-2">
-            <button class="btn btn-soft" data-view-id="${product.id}"><i class="bi bi-eye me-2"></i>View details</button>
-            <a class="btn btn-brand" href="${buildWhatsAppLink(product)}" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>WhatsApp inquiry</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  `).join("");
-
-  productGrid.querySelectorAll("[data-view-id], [data-product-id]").forEach(card => {
-    card.addEventListener("click", event => {
-      if (event.target.closest("[data-wishlist-id]")) return;
-      const id = Number(card.dataset.viewId || card.dataset.productId);
-      showProductDetails(id);
-    });
-  });
-
-  productGrid.querySelectorAll("[data-wishlist-id]").forEach(button => {
-    button.addEventListener("click", event => {
-      event.stopPropagation();
-      toggleWishlist(Number(button.dataset.wishlistId));
-    });
-  });
+  grid.innerHTML = list.map(productCard).join("");
+  wireWishlistButtons(grid);
 }
 
-function showProductDetails(id) {
-  state.selectedId = id;
-  const product = products.find(item => item.id === id) || products[0];
+function resetFilters() {
+  state.category = "All";
+  state.search = "";
+  state.maxPrice = 50000;
+  state.sort = "featured";
+  state.wishlistOnly = false;
+  syncProductControls();
+  renderProductsPage();
+}
 
-  detailContent.innerHTML = `
-    <div class="col-lg-5">
-      <div class="detail-image h-100">
-        <img src="${product.image}" alt="${product.name}">
-      </div>
-    </div>
-    <div class="col-lg-7">
-      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+function syncProductControls() {
+  const search = $("#searchInput");
+  const category = $("#categorySelect");
+  const price = $("#priceRange");
+  const sort = $("#sortSelect");
+  const priceValue = $("#priceValue");
+  const wishlistOnlyBtn = $("#wishlistOnlyBtn");
+
+  if (search) search.value = state.search;
+  if (category) category.value = state.category;
+  if (price) price.value = state.maxPrice;
+  if (sort) sort.value = state.sort;
+  if (priceValue) priceValue.textContent = formatPrice(state.maxPrice);
+  if (wishlistOnlyBtn) {
+    wishlistOnlyBtn.textContent = state.wishlistOnly ? "Showing wishlist" : "Wishlist only";
+    wishlistOnlyBtn.classList.toggle("btn-primary", state.wishlistOnly);
+    wishlistOnlyBtn.classList.toggle("btn-soft", !state.wishlistOnly);
+  }
+}
+
+function initProductsPage() {
+  const page = document.body.dataset.page;
+  if (page !== "products") return;
+
+  const categorySelect = $("#categorySelect");
+  const searchInput = $("#searchInput");
+  const priceRange = $("#priceRange");
+  const sortSelect = $("#sortSelect");
+  const clearBtn = $("#clearFiltersBtn");
+  const wishlistOnlyBtn = $("#wishlistOnlyBtn");
+
+  if (categorySelect) {
+    categorySelect.innerHTML = [`<option value="All">All</option>`].concat(
+      CATEGORIES.map(category => `<option value="${category.name}">${category.name}</option>`)
+    ).join("");
+  }
+
+  syncProductControls();
+  renderProductsPage();
+
+  if (searchInput) searchInput.addEventListener("input", e => { state.search = e.target.value; renderProductsPage(); });
+  if (categorySelect) categorySelect.addEventListener("change", e => { state.category = e.target.value; state.wishlistOnly = false; syncProductControls(); renderProductsPage(); });
+  if (priceRange) priceRange.addEventListener("input", e => { state.maxPrice = Number(e.target.value); syncProductControls(); renderProductsPage(); });
+  if (sortSelect) sortSelect.addEventListener("change", e => { state.sort = e.target.value; renderProductsPage(); });
+  if (clearBtn) clearBtn.addEventListener("click", resetFilters);
+  if (wishlistOnlyBtn) wishlistOnlyBtn.addEventListener("click", () => { state.wishlistOnly = !state.wishlistOnly; syncProductControls(); renderProductsPage(); });
+}
+
+function renderDetailPage() {
+  const root = $("#detailRoot");
+  if (!root) return;
+
+  const product = PRODUCTS.find(item => item.id === state.selectedId) || PRODUCTS[0];
+  const inWishlist = state.wishlist.has(product.id);
+
+  root.innerHTML = `
+    <div class="detail-grid">
+      <div class="detail-image"><img src="${product.image}" alt="${product.name}"></div>
+      <div>
         <span class="badge-soft">${product.badge}</span>
-        <span class="detail-meta">${product.category}</span>
-      </div>
-      <h3 class="fw-bold display-6 mb-3">${product.name}</h3>
-      <p class="detail-meta fs-5 mb-3">${product.longDescription}</p>
-      <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
-        <div class="detail-price">${formatPrice(product.price)}</div>
-        <div class="old-price fs-5">${formatPrice(product.oldPrice)}</div>
-        <div class="discount">Save ${discountPercentage(product.price, product.oldPrice)}%</div>
-      </div>
-      <div class="row g-3 mb-4">
-        ${product.highlights.map(item => `<div class="col-md-6"><div class="detail-feature"><i class="bi bi-check2-circle text-success me-2"></i>${item}</div></div>`).join("")}
-      </div>
-      <div class="d-flex flex-wrap gap-3">
-        <a class="btn btn-success btn-lg rounded-4 fw-bold" target="_blank" rel="noopener" href="${buildWhatsAppLink(product)}"><i class="bi bi-whatsapp me-2"></i>Inquire on WhatsApp</a>
-        <button class="btn ${state.wishlist.has(product.id) ? "btn-brand" : "btn-soft"} btn-lg rounded-4" id="detailWishlistBtn">
-          <i class="bi ${state.wishlist.has(product.id) ? "bi-heart-fill" : "bi-heart"} me-2"></i>${state.wishlist.has(product.id) ? "Saved to wishlist" : "Add to wishlist"}
-        </button>
+        <h1 class="detail-title">${product.name}</h1>
+        <p class="muted">${product.category}</p>
+        <p class="detail-copy">${product.longDescription}</p>
+        <div class="price-row">
+          <p class="detail-price">${formatPrice(product.price)}</p>
+          <span class="old-price">${formatPrice(product.oldPrice)}</span>
+          <span class="discount">Save ${discountPercentage(product.price, product.oldPrice)}%</span>
+        </div>
+        <div class="detail-highlights">
+          ${product.highlights.map(item => `<div class="detail-feature">✓ ${item}</div>`).join("")}
+        </div>
+        <div class="inline-actions">
+          <a class="btn btn-success" target="_blank" rel="noopener" href="${whatsappLink(product)}">WhatsApp inquiry</a>
+          <button class="btn ${inWishlist ? "btn-primary" : "btn-soft"}" id="detailWishlistBtn">${inWishlist ? "Saved to wishlist" : "Add to wishlist"}</button>
+          <a class="btn btn-soft" href="products.html?category=${encodeURIComponent(product.category)}">More ${product.category}</a>
+        </div>
       </div>
     </div>
   `;
 
-  document.getElementById("detailWishlistBtn").addEventListener("click", () => toggleWishlist(product.id));
-  document.getElementById("details").scrollIntoView({ behavior: "smooth", block: "start" });
+  const wishlistBtn = $("#detailWishlistBtn");
+  if (wishlistBtn) wishlistBtn.addEventListener("click", () => toggleWishlist(product.id));
 }
 
-function toggleWishlist(id) {
-  if (state.wishlist.has(id)) {
-    state.wishlist.delete(id);
-  } else {
-    state.wishlist.add(id);
-  }
-
-  syncInputs();
-  renderProducts();
-  showProductDetails(state.selectedId);
+function renderRelatedProducts() {
+  const grid = $("#relatedProducts");
+  if (!grid) return;
+  const current = PRODUCTS.find(item => item.id === state.selectedId) || PRODUCTS[0];
+  const list = PRODUCTS.filter(item => item.category === current.category && item.id !== current.id).slice(0, 4);
+  grid.innerHTML = list.map(productCard).join("");
+  wireWishlistButtons(grid);
 }
 
-function updateState(partial) {
-  Object.assign(state, partial);
-  syncInputs();
-  renderCategoryPills();
-  renderProducts();
+function initHomePage() {
+  renderCategoryCards("#homeCategories");
+  renderFeaturedProducts();
 }
 
-function resetFilters() {
-  updateState({
-    search: "",
-    category: "All",
-    maxPrice: 50000,
-    sort: "featured",
-    wishlistOnly: false
-  });
+function initCategoriesPage() {
+  renderCategoryCards("#categoryGrid");
 }
 
-window.resetFilters = resetFilters;
-
-searchDesktop.addEventListener("input", event => updateState({ search: event.target.value }));
-searchMobile.addEventListener("input", event => updateState({ search: event.target.value }));
-categoryDesktop.addEventListener("change", event => updateState({ category: event.target.value, wishlistOnly: false }));
-categoryMobile.addEventListener("change", event => updateState({ category: event.target.value, wishlistOnly: false }));
-priceDesktop.addEventListener("input", event => updateState({ maxPrice: Number(event.target.value) }));
-priceMobile.addEventListener("input", event => updateState({ maxPrice: Number(event.target.value) }));
-sortDesktop.addEventListener("change", event => updateState({ sort: event.target.value }));
-sortMobile.addEventListener("change", event => updateState({ sort: event.target.value }));
-
-function init() {
-  renderCategoryOptions();
-  renderCategoryPills();
-  syncInputs();
-  renderProducts();
-  showProductDetails(state.selectedId);
+function initDetailsPage() {
+  renderDetailPage();
+  renderRelatedProducts();
 }
 
-init();
+function initShared() {
+  applyQueryStateFromUrl();
+  setActiveNav();
+  initNav();
+  attachCatalogButton();
+  updateWishlistUI();
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  initShared();
+  initHomePage();
+  initCategoriesPage();
+  initProductsPage();
+  initDetailsPage();
+});
