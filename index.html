@@ -4,570 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shri Samarth Krupa Musical</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    :root {
-      --brand: #1f6feb;
-      --brand-dark: #0f4db8;
-      --accent: #f59e0b;
-      --ink: #1f2937;
-      --muted: #6b7280;
-      --surface: #ffffff;
-      --bg: #f5f7fb;
-      --border: #e5e7eb;
-      --success: #10b981;
-      --danger: #ef4444;
-      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-      --radius-xl: 28px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --radius-sm: 12px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-    }
-
-    .navbar {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(229, 231, 235, 0.85);
-    }
-
-    .navbar-brand {
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      font-size: 1.15rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .brand-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--brand), #5aa4ff);
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 12px 30px rgba(31, 111, 235, 0.25);
-      font-size: 1.05rem;
-    }
-
-    .nav-icon-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      transition: 0.2s ease;
-    }
-
-    .nav-icon-btn:hover {
-      transform: translateY(-1px);
-      border-color: #c8d2e0;
-      box-shadow: var(--shadow);
-    }
-
-    .nav-icon-btn .badge {
-      position: absolute;
-      top: -6px;
-      right: -6px;
-      font-size: 0.68rem;
-    }
-
-    .hero-wrap {
-      padding-top: 104px;
-    }
-
-    .section-space {
-      padding: 56px 0;
-    }
-
-    .hero-card {
-      border: 0;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-slide {
-      min-height: 500px;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      position: relative;
-    }
-
-    .hero-slide::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(255,255,255,0.18), transparent 28%),
-                  linear-gradient(130deg, rgba(6,18,50,0.75), rgba(6,18,50,0.18));
-    }
-
-    .hero-slide > .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .slide-1 {
-      background: linear-gradient(135deg, #134e4a, #1f6feb 45%, #0b1327);
-    }
-
-    .slide-2 {
-      background: linear-gradient(135deg, #7c2d12, #f59e0b 42%, #111827);
-    }
-
-    .slide-3 {
-      background: linear-gradient(135deg, #1d4ed8, #7c3aed 42%, #111827);
-    }
-
-    .hero-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.55rem 0.9rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      margin-bottom: 1rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 4.5vw, 4.25rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      max-width: 10ch;
-    }
-
-    .hero-copy {
-      max-width: 58ch;
-      color: rgba(255, 255, 255, 0.88);
-      font-size: 1.05rem;
-      margin: 1rem 0 1.5rem;
-    }
-
-    .soft-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-    }
-
-    .mini-stat {
-      padding: 1.15rem;
-      height: 100%;
-    }
-
-    .mini-stat h3 {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 0.25rem;
-    }
-
-    .mini-stat p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .section-head {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .eyebrow {
-      color: var(--brand);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
-      font-weight: 700;
-      margin-bottom: 0.45rem;
-      display: inline-block;
-    }
-
-    .section-title {
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.3rem;
-    }
-
-    .section-copy {
-      color: var(--muted);
-      max-width: 62ch;
-      margin: 0;
-    }
-
-    .category-pill {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 0.8rem 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-      font-weight: 600;
-      color: var(--ink);
-      transition: 0.2s ease;
-      width: 100%;
-      justify-content: center;
-    }
-
-    .category-pill:hover,
-    .category-pill.active {
-      background: var(--brand);
-      color: #fff;
-      border-color: var(--brand);
-      box-shadow: 0 12px 28px rgba(31, 111, 235, 0.22);
-      transform: translateY(-1px);
-    }
-
-    .filter-card,
-    .details-card,
-    .info-card,
-    .cta-card {
-      padding: 1.35rem;
-    }
-
-    .filter-card .form-label,
-    .details-meta,
-    .muted {
-      color: var(--muted);
-    }
-
-    .form-control,
-    .form-select {
-      border-radius: 14px;
-      border-color: var(--border);
-      padding: 0.85rem 0.95rem;
-    }
-
-    .form-control:focus,
-    .form-select:focus,
-    .form-range:focus {
-      box-shadow: 0 0 0 0.2rem rgba(31, 111, 235, 0.12);
-      border-color: rgba(31, 111, 235, 0.35);
-    }
-
-    .form-range::-webkit-slider-thumb {
-      background: var(--brand);
-    }
-
-    .form-range::-moz-range-thumb {
-      background: var(--brand);
-      border: 0;
-    }
-
-    .product-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      background: #fff;
-      overflow: hidden;
-      height: 100%;
-      transition: 0.22s ease;
-      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 42px rgba(15, 23, 42, 0.12);
-      border-color: #d8e2ef;
-    }
-
-    .product-media {
-      position: relative;
-      aspect-ratio: 4 / 3;
-      background: linear-gradient(135deg, #eff6ff, #eef2ff);
-      overflow: hidden;
-    }
-
-    .product-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.25s ease;
-    }
-
-    .product-card:hover .product-media img {
-      transform: scale(1.03);
-    }
-
-    .wishlist-btn {
-      position: absolute;
-      top: 0.9rem;
-      right: 0.9rem;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 0;
-      background: rgba(255, 255, 255, 0.94);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
-      transition: 0.2s ease;
-    }
-
-    .wishlist-btn.active {
-      color: var(--danger);
-    }
-
-    .badge-soft {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.35rem 0.65rem;
-      border-radius: 999px;
-      background: #eff6ff;
-      color: var(--brand);
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    .product-body {
-      padding: 1.15rem;
-    }
-
-    .product-category {
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .product-title {
-      font-size: 1.02rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      min-height: 2.9rem;
-    }
-
-    .product-desc {
-      color: var(--muted);
-      font-size: 0.92rem;
-      min-height: 3.15rem;
-    }
-
-    .price-row {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-      margin: 0.9rem 0 1rem;
-    }
-
-    .price {
-      font-size: 1.25rem;
-      font-weight: 800;
-    }
-
-    .old-price {
-      color: var(--muted);
-      text-decoration: line-through;
-      font-size: 0.92rem;
-    }
-
-    .discount {
-      color: var(--success);
-      font-weight: 700;
-      font-size: 0.88rem;
-    }
-
-    .btn-brand {
-      background: var(--brand);
-      border-color: var(--brand);
-      color: #fff;
-      border-radius: 14px;
-      padding: 0.78rem 1rem;
-      font-weight: 700;
-    }
-
-    .btn-brand:hover,
-    .btn-brand:focus {
-      background: var(--brand-dark);
-      border-color: var(--brand-dark);
-      color: #fff;
-    }
-
-    .btn-soft {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      color: var(--ink);
-      border-radius: 14px;
-      padding: 0.78rem 1rem;
-      font-weight: 700;
-    }
-
-    .btn-soft:hover {
-      border-color: #cdd8e6;
-      background: #fff;
-    }
-
-    .result-strip {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .detail-image-wrap {
-      background: linear-gradient(135deg, #eef4ff, #f8fbff);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      min-height: 100%;
-    }
-
-    .detail-image-wrap img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-
-    .detail-price {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .detail-feature {
-      padding: 0.8rem 0.9rem;
-      border-radius: 14px;
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      font-weight: 600;
-    }
-
-    .feature-stack .info-card {
-      height: 100%;
-    }
-
-    .feature-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(31,111,235,0.12), rgba(245,158,11,0.12));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--brand);
-      font-size: 1.35rem;
-      margin-bottom: 1rem;
-    }
-
-    .cta-card {
-      background: linear-gradient(135deg, #0f172a, #1d4ed8 55%, #0f172a);
-      color: #fff;
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-    }
-
-    .cta-card p,
-    .cta-card .muted-light {
-      color: rgba(255, 255, 255, 0.84);
-    }
-
-    footer {
-      background: #0f172a;
-      color: rgba(255,255,255,0.8);
-      padding: 28px 0;
-      margin-top: 56px;
-    }
-
-    .sticky-filter {
-      position: sticky;
-      top: 96px;
-    }
-
-    .empty-state {
-      padding: 2rem;
-      text-align: center;
-      border-radius: var(--radius-lg);
-      background: #fff;
-      border: 1px dashed #cfd8e3;
-      color: var(--muted);
-    }
-
-    @media (max-width: 991.98px) {
-      .hero-slide {
-        min-height: 430px;
-      }
-
-      .sticky-filter {
-        position: static;
-      }
-    }
-
-    @media (max-width: 767.98px) {
-      .hero-wrap {
-        padding-top: 88px;
-      }
-
-      .hero-slide {
-        min-height: 380px;
-      }
-
-      .hero-title {
-        max-width: 100%;
-      }
-
-      .section-space {
-        padding: 42px 0;
-      }
-    }
-  </style>
+  <meta name="description" content="Modern product showcase website for Shri Samarth Krupa Musical" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top app-navbar">
     <div class="container py-2">
-      <a class="navbar-brand" href="#home">
-        <span class="brand-badge"><i class="bi bi-music-note-beamed"></i></span>
+      <a class="navbar-brand brand" href="#home">
+        <span class="brand-mark"><i class="bi bi-music-note-beamed"></i></span>
         <span>Shri Samarth Krupa Musical</span>
       </a>
+
       <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 me-lg-3">
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#categories">Categories</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#shop">Products</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#product-details">Details</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#details">Details</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
+
         <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
-          <button class="nav-icon-btn" id="wishlistNavBtn" type="button" title="Wishlist">
+          <button class="icon-btn" id="wishlistNavBtn" type="button" title="Wishlist">
             <i class="bi bi-heart"></i>
             <span class="badge rounded-pill text-bg-danger" id="wishlistCount">0</span>
           </button>
-          <button class="nav-icon-btn" id="cartBtn" type="button" title="Catalog Only">
+          <button class="icon-btn" id="catalogOnlyBtn" type="button" title="Catalog Only">
             <i class="bi bi-bag"></i>
             <span class="badge rounded-pill text-bg-primary">0</span>
           </button>
@@ -576,55 +44,59 @@
     </div>
   </nav>
 
-  <main id="home" class="hero-wrap">
+  <main id="home" class="page-top-space">
     <section class="container">
-      <div id="heroCarousel" class="carousel slide hero-card" data-bs-ride="carousel">
+      <div id="heroCarousel" class="carousel slide hero-shell" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
         </div>
+
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="hero-slide slide-1">
-              <div class="container py-5">
-                <span class="hero-chip"><i class="bi bi-stars"></i> Premium display catalog</span>
-                <h1 class="hero-title">Beautiful musical instruments, presented simply.</h1>
-                <p class="hero-copy">Explore harmoniums, tablas, keyboards, guitars, dholaks, and musical accessories in a clean modern catalog. No checkout, no clutter, just product discovery and direct WhatsApp inquiry.</p>
+            <div class="hero-slide slide-one">
+              <div class="container hero-content">
+                <span class="hero-chip"><i class="bi bi-stars"></i> Premium product showcase</span>
+                <h1 class="hero-title">Display your musical products with a modern catalog experience.</h1>
+                <p class="hero-copy">A unique storefront-style website with category browsing, product filters, wishlist, detailed product view, and direct WhatsApp inquiries.</p>
                 <div class="d-flex flex-wrap gap-3">
-                  <a href="#shop" class="btn btn-light btn-lg rounded-4 fw-bold">Browse Products</a>
-                  <a href="#contact" class="btn btn-outline-light btn-lg rounded-4 fw-bold">Contact Store</a>
+                  <a href="#products" class="btn btn-light btn-lg rounded-4 fw-bold px-4">Browse Products</a>
+                  <a href="#contact" class="btn btn-outline-light btn-lg rounded-4 fw-bold px-4">Contact Store</a>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="carousel-item">
-            <div class="hero-slide slide-2">
-              <div class="container py-5">
-                <span class="hero-chip"><i class="bi bi-soundwave"></i> Signature collection</span>
-                <h1 class="hero-title">Show every category with a premium catalog feel.</h1>
-                <p class="hero-copy">Use filters, sorting, wishlist, and product details to help visitors discover the right instrument before they message you on WhatsApp.</p>
+            <div class="hero-slide slide-two">
+              <div class="container hero-content">
+                <span class="hero-chip"><i class="bi bi-soundwave"></i> Minimal modern design</span>
+                <h2 class="hero-title">Built for discovery, not checkout.</h2>
+                <p class="hero-copy">Your visitors can explore harmoniums, tablas, keyboards, guitars, dholaks, and accessories, then message you directly on WhatsApp.</p>
                 <div class="d-flex flex-wrap gap-3">
-                  <a href="#categories" class="btn btn-light btn-lg rounded-4 fw-bold">View Categories</a>
-                  <a href="#product-details" class="btn btn-outline-light btn-lg rounded-4 fw-bold">See Product Details</a>
+                  <a href="#categories" class="btn btn-light btn-lg rounded-4 fw-bold px-4">View Categories</a>
+                  <a href="#details" class="btn btn-outline-light btn-lg rounded-4 fw-bold px-4">Open Details</a>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="carousel-item">
-            <div class="hero-slide slide-3">
-              <div class="container py-5">
-                <span class="hero-chip"><i class="bi bi-whatsapp"></i> WhatsApp inquiry flow</span>
-                <h1 class="hero-title">Let customers discover first, then contact you directly.</h1>
-                <p class="hero-copy">Every product includes a direct inquiry button that opens WhatsApp with a prefilled message containing the product name and price.</p>
+            <div class="hero-slide slide-three">
+              <div class="container hero-content">
+                <span class="hero-chip"><i class="bi bi-whatsapp"></i> Direct customer inquiry</span>
+                <h2 class="hero-title">Let customers shortlist and message you instantly.</h2>
+                <p class="hero-copy">Every product includes a product-specific WhatsApp inquiry link with the product name already filled into the message.</p>
                 <div class="d-flex flex-wrap gap-3">
-                  <a href="#shop" class="btn btn-light btn-lg rounded-4 fw-bold">Start Shopping</a>
-                  <a href="#contact" class="btn btn-outline-light btn-lg rounded-4 fw-bold">Message Now</a>
+                  <a href="#products" class="btn btn-light btn-lg rounded-4 fw-bold px-4">Start Shopping</a>
+                  <a href="#contact" class="btn btn-outline-light btn-lg rounded-4 fw-bold px-4">WhatsApp Now</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
         </button>
@@ -637,28 +109,28 @@
     <section class="section-space">
       <div class="container">
         <div class="row g-4">
-          <div class="col-md-6 col-xl-3">
-            <div class="soft-card mini-stat">
-              <h3>18+</h3>
-              <p>Demo products across popular musical categories</p>
+          <div class="col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <h3>12</h3>
+              <p>Sample real-image products</p>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3">
-            <div class="soft-card mini-stat">
+          <div class="col-sm-6 col-xl-3">
+            <div class="stat-card">
               <h3>6</h3>
-              <p>Store categories for easy browsing</p>
+              <p>Musical categories</p>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3">
-            <div class="soft-card mini-stat">
+          <div class="col-sm-6 col-xl-3">
+            <div class="stat-card">
               <h3>100%</h3>
-              <p>Responsive layout for mobile and laptop</p>
+              <p>Responsive layout</p>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3">
-            <div class="soft-card mini-stat">
+          <div class="col-sm-6 col-xl-3">
+            <div class="stat-card">
               <h3>Direct</h3>
-              <p>Inquiry flow through WhatsApp only</p>
+              <p>WhatsApp inquiry flow</p>
             </div>
           </div>
         </div>
@@ -671,49 +143,56 @@
           <div>
             <span class="eyebrow">Categories</span>
             <h2 class="section-title">Shop by instrument type</h2>
-            <p class="section-copy">Unique styling with marketplace-like browsing sections, but focused entirely on showcasing your products.</p>
+            <p class="section-copy">Marketplace-style browsing with a cleaner, more premium presentation for your store.</p>
           </div>
-          <a href="#shop" class="btn btn-soft">Go to full catalog</a>
+          <a href="#products" class="btn btn-soft">Go to catalog</a>
         </div>
         <div class="row g-3" id="categoryPills"></div>
       </div>
     </section>
 
-    <section id="shop" class="section-space pt-0">
+    <section id="products" class="section-space pt-0">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="eyebrow">Catalog</span>
             <h2 class="section-title">Browse products</h2>
-            <p class="section-copy">Search, sort, filter by category and price, save favorites, and open product-specific WhatsApp inquiries.</p>
+            <p class="section-copy">Search, filter, sort, save favorites, and open product details before contacting you on WhatsApp.</p>
           </div>
-          <button class="btn btn-soft d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileFilters">
+          <button class="btn btn-soft d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileFilters">
             <i class="bi bi-sliders me-2"></i>Filters
           </button>
         </div>
 
         <div class="row g-4">
           <div class="col-lg-3 d-none d-lg-block">
-            <div class="soft-card filter-card sticky-filter">
+            <div class="panel filter-panel sticky-panel">
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <h5 class="mb-0 fw-bold">Filters</h5>
-                <button class="btn btn-sm btn-link text-decoration-none px-0" id="clearFiltersDesktop">Clear all</button>
+                <button class="btn btn-link p-0 text-decoration-none" id="clearFiltersDesktop">Clear all</button>
               </div>
+
               <div class="mb-3">
                 <label class="form-label fw-semibold">Search</label>
-                <input type="text" class="form-control" id="searchInputDesktop" placeholder="Search products...">
+                <input class="form-control" id="searchDesktop" type="text" placeholder="Search products..." />
               </div>
+
               <div class="mb-3">
                 <label class="form-label fw-semibold">Category</label>
-                <select class="form-select" id="categorySelectDesktop"></select>
+                <select class="form-select" id="categoryDesktop"></select>
               </div>
+
               <div class="mb-3">
-                <label class="form-label fw-semibold d-flex justify-content-between"><span>Maximum price</span> <span id="priceValueDesktop">₹50,000</span></label>
-                <input type="range" class="form-range" id="priceRangeDesktop" min="2000" max="50000" step="500" value="50000">
+                <label class="form-label fw-semibold d-flex justify-content-between">
+                  <span>Maximum price</span>
+                  <span id="priceLabelDesktop">₹50,000</span>
+                </label>
+                <input class="form-range" id="priceDesktop" type="range" min="2000" max="50000" step="500" value="50000" />
               </div>
-              <div class="mb-1">
+
+              <div>
                 <label class="form-label fw-semibold">Sort by</label>
-                <select class="form-select" id="sortSelectDesktop">
+                <select class="form-select" id="sortDesktop">
                   <option value="featured">Featured</option>
                   <option value="priceLowHigh">Price: Low to High</option>
                   <option value="priceHighLow">Price: High to Low</option>
@@ -724,59 +203,60 @@
           </div>
 
           <div class="col-lg-9">
-            <div class="result-strip">
+            <div class="results-bar">
               <div>
                 <div class="fw-bold" id="resultsText">Showing 0 products</div>
-                <div class="muted small">Wishlist items: <span id="wishlistText">0</span> • Cart is display-only</div>
+                <div class="small text-secondary">Wishlist items: <span id="wishlistText">0</span> • Cart icon is for display only</div>
               </div>
-              <div class="d-flex align-items-center gap-2 flex-wrap">
-                <button class="btn btn-soft" id="showWishlistOnlyBtn"><i class="bi bi-heart me-2"></i>Wishlist only</button>
-                <a href="#product-details" class="btn btn-soft"><i class="bi bi-box-arrow-up-right me-2"></i>View selected details</a>
+              <div class="d-flex gap-2 flex-wrap">
+                <button class="btn btn-soft" id="wishlistOnlyBtn"><i class="bi bi-heart me-2"></i>Wishlist only</button>
+                <a href="#details" class="btn btn-soft"><i class="bi bi-box-arrow-up-right me-2"></i>Selected details</a>
               </div>
             </div>
+
             <div class="row g-4" id="productGrid"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="product-details" class="section-space pt-0">
+    <section id="details" class="section-space pt-0">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="eyebrow">Product details</span>
             <h2 class="section-title">Focused detail view</h2>
-            <p class="section-copy">Click any product card to update this section with full details and a direct WhatsApp inquiry button.</p>
+            <p class="section-copy">Click any product card to update this section with a larger preview, highlights, and inquiry action.</p>
           </div>
         </div>
-        <div class="soft-card details-card">
-          <div class="row g-4 align-items-stretch" id="detailsContent"></div>
+        <div class="panel detail-panel">
+          <div class="row g-4 align-items-stretch" id="detailContent"></div>
         </div>
       </div>
     </section>
 
     <section class="section-space pt-0">
-      <div class="container feature-stack">
+      <div class="container">
         <div class="row g-4">
           <div class="col-md-6 col-xl-4">
-            <div class="soft-card info-card">
-              <div class="feature-icon"><i class="bi bi-grid"></i></div>
-              <h5 class="fw-bold">Marketplace-style sections</h5>
-              <p class="muted mb-0">Hero sliders, category highlights, product cards, filters, and a structured detail section create a premium storefront feel.</p>
+            <div class="info-card h-100">
+              <div class="info-icon"><i class="bi bi-grid"></i></div>
+              <h5 class="fw-bold">Marketplace-style structure</h5>
+              <p class="text-secondary mb-0">Hero banner, categories, filterable catalog, detailed product section, and conversion-focused inquiry actions.</p>
             </div>
           </div>
           <div class="col-md-6 col-xl-4">
-            <div class="soft-card info-card">
-              <div class="feature-icon"><i class="bi bi-phone"></i></div>
-              <h5 class="fw-bold">Mobile-first shopping experience</h5>
-              <p class="muted mb-0">Responsive layouts, offcanvas filters, and touch-friendly buttons keep the experience smooth on phones and tablets.</p>
+            <div class="info-card h-100">
+              <div class="info-icon"><i class="bi bi-phone"></i></div>
+              <h5 class="fw-bold">Fully responsive experience</h5>
+              <p class="text-secondary mb-0">Built for mobile, tablet, and desktop with offcanvas filters and touch-friendly cards and buttons.</p>
             </div>
           </div>
           <div class="col-md-6 col-xl-4">
-            <div class="soft-card info-card">
-              <div class="feature-icon"><i class="bi bi-whatsapp"></i></div>
-              <h5 class="fw-bold">Direct inquiry workflow</h5>
-              <p class="muted mb-0">No checkout, no payment gateway. Customers discover products and contact you instantly through WhatsApp with prefilled details.</p>
+            <div class="info-card h-100">
+              <div class="info-icon"><i class="bi bi-whatsapp"></i></div>
+              <h5 class="fw-bold">No checkout required</h5>
+              <p class="text-secondary mb-0">Your customer browses products and then contacts you directly through WhatsApp with product-specific intent.</p>
             </div>
           </div>
         </div>
@@ -785,23 +265,23 @@
 
     <section id="contact" class="section-space pt-0">
       <div class="container">
-        <div class="cta-card p-4 p-lg-5">
-          <div class="row align-items-center g-4">
+        <div class="contact-shell">
+          <div class="row g-4 align-items-center">
             <div class="col-lg-7">
               <span class="hero-chip mb-3"><i class="bi bi-headset"></i> Direct contact</span>
-              <h2 class="section-title text-white mb-3">Need a custom instrument or quick answer?</h2>
-              <p class="mb-0 muted-light">Your catalog is built to help visitors browse easily and then connect with you directly on WhatsApp for availability, pricing confirmation, or custom requirements.</p>
+              <h2 class="section-title text-white mb-3">Want to ask about availability or pricing?</h2>
+              <p class="contact-copy mb-0">This website is designed to display products beautifully and guide customers to message you directly for buying or inquiry.</p>
             </div>
             <div class="col-lg-5">
-              <div class="soft-card p-4 border-0">
+              <div class="contact-card">
                 <div class="small text-uppercase text-primary fw-bold mb-2">Store Contact</div>
                 <h4 class="fw-bold mb-2">Shri Samarth Krupa Musical</h4>
-                <p class="muted mb-3">WhatsApp inquiries only • Demo catalog ready for your real products</p>
+                <p class="text-secondary mb-3">Display catalog website with direct WhatsApp inquiry</p>
                 <div class="d-grid gap-2">
                   <a class="btn btn-success btn-lg rounded-4 fw-bold" target="_blank" rel="noopener" href="https://wa.me/918308651469?text=Hello%20Shri%20Samarth%20Krupa%20Musical%2C%20I%20want%20to%20know%20more%20about%20your%20products.">
                     <i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp
                   </a>
-                  <a class="btn btn-soft" href="#shop">Back to products</a>
+                  <a class="btn btn-soft" href="#products">Back to products</a>
                 </div>
               </div>
             </div>
@@ -811,13 +291,13 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-lg-center">
-      <div>© 2026 Shri Samarth Krupa Musical. Product showcase website.</div>
+      <div>© 2026 Shri Samarth Krupa Musical. Product display website.</div>
       <div class="d-flex gap-3">
-        <a class="text-decoration-none text-white-50" href="#home">Home</a>
-        <a class="text-decoration-none text-white-50" href="#shop">Products</a>
-        <a class="text-decoration-none text-white-50" href="#contact">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
@@ -830,25 +310,32 @@
     <div class="offcanvas-body">
       <div class="mb-3">
         <label class="form-label fw-semibold">Search</label>
-        <input type="text" class="form-control" id="searchInputMobile" placeholder="Search products...">
+        <input class="form-control" id="searchMobile" type="text" placeholder="Search products..." />
       </div>
+
       <div class="mb-3">
         <label class="form-label fw-semibold">Category</label>
-        <select class="form-select" id="categorySelectMobile"></select>
+        <select class="form-select" id="categoryMobile"></select>
       </div>
+
       <div class="mb-3">
-        <label class="form-label fw-semibold d-flex justify-content-between"><span>Maximum price</span> <span id="priceValueMobile">₹50,000</span></label>
-        <input type="range" class="form-range" id="priceRangeMobile" min="2000" max="50000" step="500" value="50000">
+        <label class="form-label fw-semibold d-flex justify-content-between">
+          <span>Maximum price</span>
+          <span id="priceLabelMobile">₹50,000</span>
+        </label>
+        <input class="form-range" id="priceMobile" type="range" min="2000" max="50000" step="500" value="50000" />
       </div>
+
       <div class="mb-3">
         <label class="form-label fw-semibold">Sort by</label>
-        <select class="form-select" id="sortSelectMobile">
+        <select class="form-select" id="sortMobile">
           <option value="featured">Featured</option>
           <option value="priceLowHigh">Price: Low to High</option>
           <option value="priceHighLow">Price: High to Low</option>
           <option value="nameAZ">Name: A to Z</option>
         </select>
       </div>
+
       <div class="d-grid gap-2">
         <button class="btn btn-brand" id="applyMobileFilters" data-bs-dismiss="offcanvas">Apply Filters</button>
         <button class="btn btn-soft" id="clearFiltersMobile">Clear all</button>
@@ -856,568 +343,16 @@
     </div>
   </div>
 
-  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
-    <div id="catalogToast" class="toast align-items-center border-0 shadow" role="alert">
+  <div class="position-fixed bottom-0 end-0 p-3 toast-wrap">
+    <div id="catalogToast" class="toast border-0 shadow" role="alert">
       <div class="d-flex">
-        <div class="toast-body fw-semibold">This site is display-only. Orders and inquiries happen on WhatsApp.</div>
+        <div class="toast-body fw-semibold">This is a display-only website. Customers contact you on WhatsApp.</div>
         <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const WHATSAPP_NUMBER = '918308651469';
-
-    const products = [
-      {
-        id: 1,
-        name: 'SurSadhana Harmonium Classic 9 Stop',
-        category: 'Harmonium',
-        price: 18999,
-        oldPrice: 21999,
-        badge: 'Bestseller',
-        description: 'Traditional hand-finished harmonium with warm tonal character for devotional and stage use.',
-        longDescription: 'A balanced and reliable harmonium crafted for bhajan, classical practice, and small performances. The cabinet is compact, durable, and easy to maintain for daily use.',
-        highlights: ['9-stop setup', 'Smooth key response', 'Portable folding body'],
-        palette: ['#0ea5e9', '#1d4ed8']
-      },
-      {
-        id: 2,
-        name: 'Mehfil Pro Bass Harmonium',
-        category: 'Harmonium',
-        price: 24999,
-        oldPrice: 28999,
-        badge: 'Premium',
-        description: 'Rich bass-heavy harmonium designed for deep resonance and fuller live sound.',
-        longDescription: 'Ideal for devotional singers and performers who prefer fuller tonal depth. The structure is made to give a stable playing feel and a refined front profile.',
-        highlights: ['Enhanced bass tone', 'Concert-ready sound', 'Polished wood finish'],
-        palette: ['#2563eb', '#7c3aed']
-      },
-      {
-        id: 3,
-        name: 'Naad Tabla Set Sheesham Deluxe',
-        category: 'Tabla',
-        price: 15999,
-        oldPrice: 18499,
-        badge: 'Popular',
-        description: 'Classic tabla pair with strong bayan response and precise dayan clarity.',
-        longDescription: 'A versatile tabla set suitable for learners and intermediate artists. It delivers clear bols, stable tuning, and a presentation-ready appearance.',
-        highlights: ['Clear tonal articulation', 'Balanced dayan and bayan', 'Practice to performance ready'],
-        palette: ['#f59e0b', '#ea580c']
-      },
-      {
-        id: 4,
-        name: 'Riyaaz Tabla Set Copper Bayan',
-        category: 'Tabla',
-        price: 22999,
-        oldPrice: 25999,
-        badge: 'Artist Pick',
-        description: 'Refined copper bayan tabla set with rich sustain and elegant handcrafted finish.',
-        longDescription: 'Designed for players who want deeper bass response and a polished premium look. Suitable for stage, class, and advanced riyaz sessions.',
-        highlights: ['Copper bayan body', 'Premium skin finish', 'Smooth tonal sustain'],
-        palette: ['#fb7185', '#be123c']
-      },
-      {
-        id: 5,
-        name: 'SwarKey 61 Portable Keyboard',
-        category: 'Keyboard',
-        price: 14499,
-        oldPrice: 16999,
-        badge: 'New',
-        description: 'Compact 61-key keyboard for home learning, music classes, and quick practice.',
-        longDescription: 'An easy-to-handle keyboard with responsive keys, beginner-friendly layout, and modern styling that works well for students and hobby musicians.',
-        highlights: ['61 responsive keys', 'Compact footprint', 'Good for learners'],
-        palette: ['#22c55e', '#0f766e']
-      },
-      {
-        id: 6,
-        name: 'Melody Pro Performance Keyboard',
-        category: 'Keyboard',
-        price: 27999,
-        oldPrice: 31999,
-        badge: 'Featured',
-        description: 'Stylish performance keyboard with stage-friendly body and premium visual appeal.',
-        longDescription: 'A polished keyboard option for players who want a more serious setup for live use, teaching studios, and extended practice sessions.',
-        highlights: ['Performance-style body', 'Premium finish', 'Designed for stage appeal'],
-        palette: ['#8b5cf6', '#4f46e5']
-      },
-      {
-        id: 7,
-        name: 'Aarambh Acoustic Guitar Natural',
-        category: 'Guitar',
-        price: 8499,
-        oldPrice: 9999,
-        badge: 'Starter Favorite',
-        description: 'Comfortable acoustic guitar for beginners with a warm balanced tone.',
-        longDescription: 'A reliable everyday guitar for practice, tuition classes, and casual performance. The slim profile and clean natural finish make it approachable for new players.',
-        highlights: ['Comfortable neck profile', 'Warm acoustic tone', 'Beginner friendly'],
-        palette: ['#0ea5e9', '#06b6d4']
-      },
-      {
-        id: 8,
-        name: 'SurTarang Cutaway Acoustic Guitar',
-        category: 'Guitar',
-        price: 12499,
-        oldPrice: 14999,
-        badge: 'Modern',
-        description: 'Modern cutaway acoustic guitar with stylish silhouette and versatile sound.',
-        longDescription: 'Great for students, singer-songwriters, and anyone who wants a sleek showcase instrument with a little extra visual flair.',
-        highlights: ['Cutaway body', 'Contemporary styling', 'Versatile for practice and stage'],
-        palette: ['#14b8a6', '#0f766e']
-      },
-      {
-        id: 9,
-        name: 'Taal Dholak Mango Wood',
-        category: 'Dholak',
-        price: 6999,
-        oldPrice: 7999,
-        badge: 'Value Pick',
-        description: 'Lightweight dholak with crisp highs and rounded bass for folk and bhajan use.',
-        longDescription: 'A practical and attractive dholak built for devotional gatherings, practice, and festive events. Easy to carry and easy to display.',
-        highlights: ['Balanced folk tone', 'Portable body', 'Ideal for devotional use'],
-        palette: ['#f97316', '#f59e0b']
-      },
-      {
-        id: 10,
-        name: 'Festival Dholak Hand-Rope Edition',
-        category: 'Dholak',
-        price: 10999,
-        oldPrice: 12999,
-        badge: 'Handcrafted',
-        description: 'Hand-laced dholak with premium visual texture and festive performance energy.',
-        longDescription: 'An eye-catching dholak for stage presence, cultural shows, and regular performance use. Crafted to combine decorative charm and playable comfort.',
-        highlights: ['Traditional rope lacing', 'Great visual appeal', 'Folk performance ready'],
-        palette: ['#fb7185', '#f97316']
-      },
-      {
-        id: 11,
-        name: 'Riyaz Tabla Hammer & Cover Kit',
-        category: 'Musical Accessories',
-        price: 1499,
-        oldPrice: 1799,
-        badge: 'Useful Add-on',
-        description: 'A practical accessory combo with protective cover and tuning hammer for tabla players.',
-        longDescription: 'Perfect for players who want to maintain their tabla set properly while keeping it protected during storage and transport.',
-        highlights: ['Protective cover', 'Includes tuning hammer', 'Simple maintenance essential'],
-        palette: ['#3b82f6', '#6366f1']
-      },
-      {
-        id: 12,
-        name: 'Universal Keyboard Stand X-Type',
-        category: 'Musical Accessories',
-        price: 2599,
-        oldPrice: 3199,
-        badge: 'Essential',
-        description: 'Stable keyboard stand with foldable X-frame design for home and stage use.',
-        longDescription: 'A neat and useful accessory that complements keyboard displays and adds a professional touch to your product collection.',
-        highlights: ['Foldable design', 'Stable support', 'Works for multiple keyboard sizes'],
-        palette: ['#64748b', '#334155']
-      },
-      {
-        id: 13,
-        name: 'Bhakti Harmonium Compact Studio',
-        category: 'Harmonium',
-        price: 16999,
-        oldPrice: 19999,
-        badge: 'Compact',
-        description: 'Compact harmonium for home practice and devotional sessions.',
-        longDescription: 'Built for space-saving setups without losing the visual charm and playing comfort expected from a quality harmonium.',
-        highlights: ['Compact body', 'Easy to carry', 'Ideal for home use'],
-        palette: ['#06b6d4', '#2563eb']
-      },
-      {
-        id: 14,
-        name: 'TaalMitra Student Tabla Set',
-        category: 'Tabla',
-        price: 11999,
-        oldPrice: 13999,
-        badge: 'Beginner',
-        description: 'Student-focused tabla set with dependable sound and clean appearance.',
-        longDescription: 'An approachable option for classes and practice sessions, offering consistent response and simple upkeep.',
-        highlights: ['Student-friendly set', 'Good tuning stability', 'Clean visual finish'],
-        palette: ['#f59e0b', '#dc2626']
-      },
-      {
-        id: 15,
-        name: 'StageTone 88 Digital Keyboard',
-        category: 'Keyboard',
-        price: 38999,
-        oldPrice: 42999,
-        badge: 'Professional',
-        description: 'Full-size digital keyboard with premium presence for performance setups.',
-        longDescription: 'A statement product for advanced users and showroom display, built to feel substantial and stage-worthy.',
-        highlights: ['88-key style presentation', 'Premium stage look', 'Advanced setup appeal'],
-        palette: ['#4338ca', '#1d4ed8']
-      },
-      {
-        id: 16,
-        name: 'Raag Acoustic Guitar Mahogany',
-        category: 'Guitar',
-        price: 16999,
-        oldPrice: 19499,
-        badge: 'Premium Wood Finish',
-        description: 'Elegant acoustic guitar with rich brown finish and showroom-worthy design.',
-        longDescription: 'A polished guitar model that fits premium catalog layouts while staying versatile for lessons, gifting, and performance.',
-        highlights: ['Premium wood-style finish', 'Elegant body design', 'Balanced showcase instrument'],
-        palette: ['#7c2d12', '#b45309']
-      },
-      {
-        id: 17,
-        name: 'Lehra Dholak Studio Edition',
-        category: 'Dholak',
-        price: 8799,
-        oldPrice: 9999,
-        badge: 'Studio Ready',
-        description: 'Refined dholak with polished shell and crisp response for practice and recording rooms.',
-        longDescription: 'A stylish dholak that adds variety to your catalog and suits serious regular users looking for upgraded aesthetics.',
-        highlights: ['Polished shell finish', 'Sharper high response', 'Good for studio-like spaces'],
-        palette: ['#ec4899', '#f59e0b']
-      },
-      {
-        id: 18,
-        name: 'Musician Care Accessory Combo',
-        category: 'Musical Accessories',
-        price: 1999,
-        oldPrice: 2499,
-        badge: 'Combo',
-        description: 'Useful accessory combo for everyday care, storage, and setup convenience.',
-        longDescription: 'A smart add-on package that complements instrument sales and helps round out your display catalog.',
-        highlights: ['Easy maintenance support', 'Value combo pack', 'Great cross-sell display item'],
-        palette: ['#0f766e', '#22c55e']
-      }
-    ];
-
-    const state = {
-      search: '',
-      category: 'All',
-      maxPrice: 50000,
-      sort: 'featured',
-      selectedProductId: 1,
-      wishlistOnly: false,
-      wishlist: new Set()
-    };
-
-    const categories = ['All', 'Harmonium', 'Tabla', 'Keyboard', 'Guitar', 'Dholak', 'Musical Accessories'];
-
-    const categoryPills = document.getElementById('categoryPills');
-    const productGrid = document.getElementById('productGrid');
-    const resultsText = document.getElementById('resultsText');
-    const wishlistCount = document.getElementById('wishlistCount');
-    const wishlistText = document.getElementById('wishlistText');
-    const detailsContent = document.getElementById('detailsContent');
-    const showWishlistOnlyBtn = document.getElementById('showWishlistOnlyBtn');
-
-    const searchInputDesktop = document.getElementById('searchInputDesktop');
-    const categorySelectDesktop = document.getElementById('categorySelectDesktop');
-    const priceRangeDesktop = document.getElementById('priceRangeDesktop');
-    const priceValueDesktop = document.getElementById('priceValueDesktop');
-    const sortSelectDesktop = document.getElementById('sortSelectDesktop');
-
-    const searchInputMobile = document.getElementById('searchInputMobile');
-    const categorySelectMobile = document.getElementById('categorySelectMobile');
-    const priceRangeMobile = document.getElementById('priceRangeMobile');
-    const priceValueMobile = document.getElementById('priceValueMobile');
-    const sortSelectMobile = document.getElementById('sortSelectMobile');
-
-    const cartBtn = document.getElementById('cartBtn');
-    const catalogToast = new bootstrap.Toast(document.getElementById('catalogToast'));
-
-    function formatPrice(value) {
-      return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(value);
-    }
-
-    function discountPercentage(price, oldPrice) {
-      return Math.round(((oldPrice - price) / oldPrice) * 100);
-    }
-
-    function createProductArt(product) {
-      const svg = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="${product.palette[0]}"/>
-              <stop offset="100%" stop-color="${product.palette[1]}"/>
-            </linearGradient>
-          </defs>
-          <rect width="1200" height="900" rx="48" fill="url(#g)"/>
-          <circle cx="1020" cy="120" r="180" fill="rgba(255,255,255,0.14)"/>
-          <circle cx="180" cy="760" r="220" fill="rgba(255,255,255,0.1)"/>
-          <rect x="85" y="90" width="320" height="54" rx="27" fill="rgba(255,255,255,0.18)"/>
-          <text x="125" y="126" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">${product.category}</text>
-          <text x="84" y="335" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800">${product.name.split(' ').slice(0, 2).join(' ')}</text>
-          <text x="84" y="425" fill="rgba(255,255,255,0.88)" font-family="Arial, Helvetica, sans-serif" font-size="34">Showcase Product</text>
-          <rect x="84" y="520" width="420" height="98" rx="26" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.28)"/>
-          <text x="120" y="580" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800">${formatPrice(product.price)}</text>
-          <text x="84" y="730" fill="rgba(255,255,255,0.9)" font-family="Arial, Helvetica, sans-serif" font-size="28">Shri Samarth Krupa Musical</text>
-        </svg>`;
-      return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-    }
-
-    const enrichedProducts = products.map(product => ({ ...product, image: createProductArt(product) }));
-
-    function buildWhatsAppLink(product) {
-      const message = `Hello Shri Samarth Krupa Musical, I am interested in "${product.name}" (${formatPrice(product.price)}). Please share more details.`;
-      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    }
-
-    function syncInputs() {
-      searchInputDesktop.value = state.search;
-      searchInputMobile.value = state.search;
-      categorySelectDesktop.value = state.category;
-      categorySelectMobile.value = state.category;
-      priceRangeDesktop.value = state.maxPrice;
-      priceRangeMobile.value = state.maxPrice;
-      sortSelectDesktop.value = state.sort;
-      sortSelectMobile.value = state.sort;
-      priceValueDesktop.textContent = formatPrice(state.maxPrice);
-      priceValueMobile.textContent = formatPrice(state.maxPrice);
-      wishlistCount.textContent = state.wishlist.size;
-      wishlistText.textContent = state.wishlist.size;
-      showWishlistOnlyBtn.classList.toggle('btn-brand', state.wishlistOnly);
-      showWishlistOnlyBtn.classList.toggle('btn-soft', !state.wishlistOnly);
-      showWishlistOnlyBtn.innerHTML = state.wishlistOnly
-        ? '<i class="bi bi-heart-fill me-2"></i>Showing wishlist'
-        : '<i class="bi bi-heart me-2"></i>Wishlist only';
-    }
-
-    function renderCategoryOptions() {
-      const options = categories.map(category => `<option value="${category}">${category}</option>`).join('');
-      categorySelectDesktop.innerHTML = options;
-      categorySelectMobile.innerHTML = options;
-    }
-
-    function renderCategoryPills() {
-      categoryPills.innerHTML = categories.slice(1).map(category => `
-        <div class="col-6 col-md-4 col-xl-2">
-          <button class="category-pill ${state.category === category ? 'active' : ''}" data-category="${category}">
-            <i class="bi bi-vinyl"></i>
-            <span>${category}</span>
-          </button>
-        </div>
-      `).join('');
-
-      categoryPills.querySelectorAll('[data-category]').forEach(button => {
-        button.addEventListener('click', () => {
-          state.category = button.dataset.category;
-          state.wishlistOnly = false;
-          syncInputs();
-          renderCategoryPills();
-          renderProducts();
-          document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
-        });
-      });
-    }
-
-    function getFilteredProducts() {
-      const query = state.search.trim().toLowerCase();
-
-      let filtered = enrichedProducts.filter(product => {
-        const matchesSearch = !query || [product.name, product.category, product.description, product.longDescription]
-          .join(' ')
-          .toLowerCase()
-          .includes(query);
-
-        const matchesCategory = state.category === 'All' || product.category === state.category;
-        const matchesPrice = product.price <= state.maxPrice;
-        const matchesWishlist = !state.wishlistOnly || state.wishlist.has(product.id);
-
-        return matchesSearch && matchesCategory && matchesPrice && matchesWishlist;
-      });
-
-      switch (state.sort) {
-        case 'priceLowHigh':
-          filtered.sort((a, b) => a.price - b.price);
-          break;
-        case 'priceHighLow':
-          filtered.sort((a, b) => b.price - a.price);
-          break;
-        case 'nameAZ':
-          filtered.sort((a, b) => a.name.localeCompare(b.name));
-          break;
-        default:
-          filtered.sort((a, b) => a.id - b.id);
-      }
-
-      return filtered;
-    }
-
-    function renderProducts() {
-      const filtered = getFilteredProducts();
-      resultsText.textContent = `Showing ${filtered.length} product${filtered.length === 1 ? '' : 's'}`;
-
-      if (!filtered.length) {
-        productGrid.innerHTML = `
-          <div class="col-12">
-            <div class="empty-state">
-              <h5 class="fw-bold mb-2">No products found</h5>
-              <p class="mb-3">Try changing your search, category, or price filter.</p>
-              <button class="btn btn-brand" onclick="resetFilters()">Reset filters</button>
-            </div>
-          </div>`;
-        return;
-      }
-
-      productGrid.innerHTML = filtered.map(product => `
-        <div class="col-sm-6 col-xl-4">
-          <article class="product-card" role="button" tabindex="0" data-product-id="${product.id}">
-            <div class="product-media">
-              <img src="${product.image}" alt="${product.name}">
-              <button class="wishlist-btn ${state.wishlist.has(product.id) ? 'active' : ''}" data-wishlist-id="${product.id}" aria-label="Add to wishlist">
-                <i class="bi ${state.wishlist.has(product.id) ? 'bi-heart-fill' : 'bi-heart'}"></i>
-              </button>
-            </div>
-            <div class="product-body">
-              <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                <span class="badge-soft">${product.badge}</span>
-                <span class="product-category">${product.category}</span>
-              </div>
-              <h3 class="product-title">${product.name}</h3>
-              <p class="product-desc">${product.description}</p>
-              <div class="price-row">
-                <span class="price">${formatPrice(product.price)}</span>
-                <span class="old-price">${formatPrice(product.oldPrice)}</span>
-                <span class="discount">${discountPercentage(product.price, product.oldPrice)}% off</span>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-soft" data-view-id="${product.id}"><i class="bi bi-eye me-2"></i>View details</button>
-                <a class="btn btn-brand" href="${buildWhatsAppLink(product)}" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>WhatsApp inquiry</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      `).join('');
-
-      productGrid.querySelectorAll('[data-view-id], [data-product-id]').forEach(element => {
-        element.addEventListener('click', event => {
-          const id = Number(element.dataset.viewId || element.dataset.productId);
-          if (event.target.closest('[data-wishlist-id]')) return;
-          showProductDetails(id);
-        });
-      });
-
-      productGrid.querySelectorAll('[data-wishlist-id]').forEach(button => {
-        button.addEventListener('click', event => {
-          event.stopPropagation();
-          const id = Number(button.dataset.wishlistId);
-          toggleWishlist(id);
-        });
-      });
-    }
-
-    function showProductDetails(id) {
-      state.selectedProductId = id;
-      const product = enrichedProducts.find(item => item.id === id) || enrichedProducts[0];
-
-      detailsContent.innerHTML = `
-        <div class="col-lg-5">
-          <div class="detail-image-wrap h-100">
-            <img src="${product.image}" alt="${product.name}">
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-            <span class="badge-soft">${product.badge}</span>
-            <span class="details-meta">${product.category}</span>
-          </div>
-          <h3 class="fw-bold display-6 mb-3">${product.name}</h3>
-          <p class="details-meta fs-5 mb-3">${product.longDescription}</p>
-          <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
-            <div class="detail-price">${formatPrice(product.price)}</div>
-            <div class="old-price fs-5">${formatPrice(product.oldPrice)}</div>
-            <div class="discount">Save ${discountPercentage(product.price, product.oldPrice)}%</div>
-          </div>
-          <div class="row g-3 mb-4">
-            ${product.highlights.map(item => `<div class="col-md-6"><div class="detail-feature"><i class="bi bi-check2-circle text-success me-2"></i>${item}</div></div>`).join('')}
-          </div>
-          <div class="d-flex flex-wrap gap-3">
-            <a class="btn btn-success btn-lg rounded-4 fw-bold" target="_blank" rel="noopener" href="${buildWhatsAppLink(product)}"><i class="bi bi-whatsapp me-2"></i>Inquire on WhatsApp</a>
-            <button class="btn ${state.wishlist.has(product.id) ? 'btn-brand' : 'btn-soft'} btn-lg rounded-4" id="detailWishlistBtn">
-              <i class="bi ${state.wishlist.has(product.id) ? 'bi-heart-fill' : 'bi-heart'} me-2"></i>${state.wishlist.has(product.id) ? 'Saved to wishlist' : 'Add to wishlist'}
-            </button>
-          </div>
-        </div>
-      `;
-
-      const detailWishlistBtn = document.getElementById('detailWishlistBtn');
-      detailWishlistBtn.addEventListener('click', () => toggleWishlist(product.id));
-
-      document.getElementById('product-details').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    function toggleWishlist(id) {
-      if (state.wishlist.has(id)) {
-        state.wishlist.delete(id);
-      } else {
-        state.wishlist.add(id);
-      }
-      syncInputs();
-      renderProducts();
-      showProductDetails(state.selectedProductId);
-    }
-
-    function updateState(partial) {
-      Object.assign(state, partial);
-      syncInputs();
-      renderCategoryPills();
-      renderProducts();
-    }
-
-    function resetFilters() {
-      updateState({
-        search: '',
-        category: 'All',
-        maxPrice: 50000,
-        sort: 'featured',
-        wishlistOnly: false
-      });
-    }
-
-    window.resetFilters = resetFilters;
-
-    function bindFilterEvents() {
-      searchInputDesktop.addEventListener('input', event => updateState({ search: event.target.value }));
-      searchInputMobile.addEventListener('input', event => updateState({ search: event.target.value }));
-
-      categorySelectDesktop.addEventListener('change', event => updateState({ category: event.target.value, wishlistOnly: false }));
-      categorySelectMobile.addEventListener('change', event => updateState({ category: event.target.value, wishlistOnly: false }));
-
-      priceRangeDesktop.addEventListener('input', event => updateState({ maxPrice: Number(event.target.value) }));
-      priceRangeMobile.addEventListener('input', event => updateState({ maxPrice: Number(event.target.value) }));
-
-      sortSelectDesktop.addEventListener('change', event => updateState({ sort: event.target.value }));
-      sortSelectMobile.addEventListener('change', event => updateState({ sort: event.target.value }));
-
-      document.getElementById('clearFiltersDesktop').addEventListener('click', resetFilters);
-      document.getElementById('clearFiltersMobile').addEventListener('click', resetFilters);
-      document.getElementById('applyMobileFilters').addEventListener('click', () => renderProducts());
-
-      showWishlistOnlyBtn.addEventListener('click', () => {
-        state.wishlistOnly = !state.wishlistOnly;
-        syncInputs();
-        renderProducts();
-      });
-
-      document.getElementById('wishlistNavBtn').addEventListener('click', () => {
-        state.wishlistOnly = !state.wishlistOnly;
-        syncInputs();
-        renderProducts();
-        document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
-      });
-
-      cartBtn.addEventListener('click', () => catalogToast.show());
-    }
-
-    function init() {
-      renderCategoryOptions();
-      renderCategoryPills();
-      syncInputs();
-      renderProducts();
-      showProductDetails(state.selectedProductId);
-      bindFilterEvents();
-    }
-
-    init();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
