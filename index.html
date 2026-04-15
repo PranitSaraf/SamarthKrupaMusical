@@ -36,41 +36,58 @@
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero home-hero">
       <div class="container">
-        <div class="hero-shell">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <span class="hero-chip">✨ Premium product showcase</span>
-              <h1 class="hero-title">Display your musical products with a modern catalog experience.</h1>
-              <p class="hero-copy">A unique storefront-style website with category browsing, product filters, wishlist, detailed product view, and direct WhatsApp inquiries.</p>
+        <div class="hero-shell clean-hero">
+          <div class="hero-grid hero-grid-clean">
+            <div class="hero-content hero-content-clean">
+              <span class="hero-chip">Curated musical catalog</span>
+              <h1 class="hero-title">Beautiful instruments. Clean browsing. Direct WhatsApp inquiries.</h1>
+              <p class="hero-copy">A simpler home page focused on your products. Visitors can explore categories, open details, and contact you directly without any checkout flow.</p>
+
               <div class="hero-actions">
                 <a class="btn btn-light" href="products.html">Browse Products</a>
                 <a class="btn btn-outline" href="contact.html">Contact Store</a>
               </div>
+
+              <div class="hero-points">
+                <span>6 categories</span>
+                <span>Mobile friendly</span>
+                <span>Direct WhatsApp flow</span>
+              </div>
+
+              <div class="hero-quick-links">
+                <a class="quick-link" href="products.html?category=Harmonium">Harmonium</a>
+                <a class="quick-link" href="products.html?category=Tabla">Tabla</a>
+                <a class="quick-link" href="products.html?category=Keyboard">Keyboard</a>
+                <a class="quick-link" href="products.html?category=Guitar">Guitar</a>
+                <a class="quick-link" href="products.html?category=Dholak">Dholak</a>
+                <a class="quick-link" href="products.html?category=Musical%20Accessories">Accessories</a>
+              </div>
             </div>
 
-            <div class="hero-card">
-              <h2>Why this version works</h2>
-              <p class="hero-copy">It is now built as real separate files, so the CSS and JavaScript load correctly and the products render properly.</p>
-              <div class="hero-card-grid">
-                <div class="hero-mini">
-                  <h3>5 Pages</h3>
-                  <p>Home, categories, products, details, contact</p>
+            <div class="hero-showcase">
+              <a class="showcase-card showcase-main" href="details.html?id=1">
+                <img src="https://images.unsplash.com/photo-1514119412350-e174d90d280e?auto=format&fit=crop&w=900&q=80" alt="Featured harmonium" loading="lazy">
+                <div class="showcase-copy">
+                  <strong>Featured Harmonium</strong>
+                  <span>Classic collection</span>
                 </div>
-                <div class="hero-mini">
-                  <h3>12</h3>
-                  <p>Sample products with public images</p>
+              </a>
+              <a class="showcase-card" href="details.html?id=3">
+                <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=700&q=80" alt="Featured tabla" loading="lazy">
+                <div class="showcase-copy">
+                  <strong>Tabla</strong>
+                  <span>Stage ready</span>
                 </div>
-                <div class="hero-mini">
-                  <h3>100%</h3>
-                  <p>Responsive on mobile and desktop</p>
+              </a>
+              <a class="showcase-card" href="details.html?id=7">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=700&q=80" alt="Featured guitar" loading="lazy">
+                <div class="showcase-copy">
+                  <strong>Guitar</strong>
+                  <span>Popular picks</span>
                 </div>
-                <div class="hero-mini">
-                  <h3>Direct</h3>
-                  <p>WhatsApp inquiry flow only</p>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -78,59 +95,44 @@
     </section>
 
     <section class="section compact">
-      <div class="container grid grid-4">
-        <div class="stat-card"><h3>12</h3><p>Sample products with images</p></div>
-        <div class="stat-card"><h3>6</h3><p>Musical categories</p></div>
-        <div class="stat-card"><h3>Separate</h3><p>Dedicated page for each main section</p></div>
-        <div class="stat-card"><h3>Direct</h3><p>WhatsApp inquiry buttons on every product</p></div>
-      </div>
-    </section>
-
-    <section class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Categories</span>
-            <h2 class="section-title">Shop by instrument type</h2>
-            <p class="section-copy">Clean category blocks with direct links to filtered catalog pages.</p>
-          </div>
-          <a class="btn btn-soft" href="categories.html">Open categories</a>
-        </div>
-        <div class="grid grid-categories" id="homeCategories"></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
+        <div class="section-head compact-head">
           <div>
             <span class="eyebrow">Featured products</span>
             <h2 class="section-title">Popular items from your catalog</h2>
-            <p class="section-copy">Visitors can view details or message you directly for each product.</p>
+            <p class="section-copy">Your product cards now appear much earlier on the home page.</p>
           </div>
           <a class="btn btn-soft" href="products.html">Full catalog</a>
         </div>
-        <div class="product-grid" id="featuredProducts"></div>
+        <div class="product-grid featured-grid" id="featuredProducts"></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="info-grid">
-          <div class="info-card">
-            <div class="info-icon">▦</div>
-            <h3>Marketplace-style structure</h3>
-            <p>Hero banner, categories, filterable catalog, and a focused product details page.</p>
+        <div class="section-head compact-head">
+          <div>
+            <span class="eyebrow">Categories</span>
+            <h2 class="section-title">Shop by instrument type</h2>
+            <p class="section-copy">Direct links to filtered catalog pages for faster browsing.</p>
           </div>
-          <div class="info-card">
-            <div class="info-icon">📱</div>
-            <h3>Responsive layout</h3>
-            <p>The design works across laptops, tablets, and phones with a mobile menu and flexible grids.</p>
+          <a class="btn btn-soft" href="categories.html">Open categories</a>
+        </div>
+        <div class="grid grid-categories home-categories-grid" id="homeCategories"></div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container">
+        <div class="home-cta">
+          <div>
+            <span class="eyebrow light">Quick inquiry</span>
+            <h2>Need price, stock, or product help?</h2>
+            <p>Keep browsing the catalog or message Shri Samarth Krupa Musical directly on WhatsApp.</p>
           </div>
-          <div class="info-card">
-            <div class="info-icon">💬</div>
-            <h3>No checkout required</h3>
-            <p>Customers explore your products and contact you directly on WhatsApp instead of adding to cart.</p>
+          <div class="inline-actions">
+            <a class="btn btn-light" target="_blank" rel="noopener" href="https://wa.me/918308651469?text=Hello%20Shri%20Samarth%20Krupa%20Musical%2C%20I%20want%20to%20know%20more%20about%20your%20products.">WhatsApp now</a>
+            <a class="btn btn-outline" href="products.html">See all products</a>
           </div>
         </div>
       </div>

@@ -352,7 +352,7 @@ function filteredProducts() {
 function renderFeaturedProducts() {
   const grid = $("#featuredProducts");
   if (!grid) return;
-  grid.innerHTML = PRODUCTS.slice(0, 6).map(productCard).join("");
+  grid.innerHTML = PRODUCTS.slice(0, 4).map(productCard).join("");
   wireWishlistButtons(grid);
 }
 
