@@ -156,6 +156,17 @@ const CATEGORIES = [
   { name: "Musical Accessories", icon: "🎤", copy: "Useful add-ons like microphones, stands, and support gear." }
 ];
 
+function loadWishlist() {
+  try {
+    const raw = window.localStorage.getItem("ssk-wishlist");
+    const parsed = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(parsed) ? parsed : []);
+  } catch (error) {
+    console.warn("Wishlist storage could not be read. Resetting it.", error);
+    return new Set();
+  }
+}
+
 const state = {
   category: "All",
   search: "",
@@ -163,7 +174,7 @@ const state = {
   sort: "featured",
   wishlistOnly: false,
   selectedId: 1,
-  wishlist: new Set(JSON.parse(localStorage.getItem("ssk-wishlist") || "[]"))
+  wishlist: loadWishlist()
 };
 
 function $(selector, root = document) { return root.querySelector(selector); }
@@ -183,7 +194,11 @@ function whatsappLink(product) {
 }
 
 function saveWishlist() {
-  localStorage.setItem("ssk-wishlist", JSON.stringify([...state.wishlist]));
+  try {
+    window.localStorage.setItem("ssk-wishlist", JSON.stringify([...state.wishlist]));
+  } catch (error) {
+    console.warn("Wishlist storage could not be saved.", error);
+  }
   updateWishlistUI();
 }
 
