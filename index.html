@@ -1,1 +1,163 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Shri Samarth Krupa Musical</title><link rel="stylesheet" href="style.css"></head><body data-page="home"><header class="site-header"><div class="container navbar"><a class="brand" href="index.html"><span class="brand-mark">♫</span><span data-store-name>Shri Samarth Krupa Musical</span></a><button class="nav-toggle" aria-label="Toggle menu"><span></span></button><div class="nav-menu"><nav><ul class="nav-links"><li><a href="index.html" data-page="home">Home</a></li><li><a href="categories.html" data-page="categories">Categories</a></li><li><a href="products.html" data-page="products">Products</a></li><li><a href="details.html" data-page="details">Details</a></li><li><a href="contact.html" data-page="contact">Contact</a></li><li><a href="admin.html">Admin</a></li></ul></nav><div class="nav-actions"><button class="icon-btn"><span>♡</span><span class="count red">0</span></button><button class="icon-btn"><span>👜</span><span class="count blue">0</span></button></div></div></div></header><main><section class="page-hero"><div class="container"><div class="hero-shell"><div class="hero-grid"><div><span class="hero-chip">Curated musical catalog</span><h1 class="hero-title">Beautiful instruments. Clean browsing. Direct WhatsApp inquiries.</h1><p class="hero-copy">A simple storefront focused on your products. Visitors can explore categories, open details, and contact you directly.</p><div class="hero-actions"><a class="btn btn-light" href="products.html">Browse Products</a><a class="btn btn-outline" href="contact.html">Contact Store</a></div><div class="hero-points"><span>Live categories</span><span>Shared script.js data</span><span>Direct WhatsApp flow</span></div><div class="hero-quick-links"><a class="quick-link" href="products.html?category=Harmonium">Harmonium</a><a class="quick-link" href="products.html?category=Tabla">Tabla</a><a class="quick-link" href="products.html?category=Keyboard">Keyboard</a><a class="quick-link" href="products.html?category=Guitar">Guitar</a><a class="quick-link" href="products.html?category=Dholak">Dholak</a><a class="quick-link" href="products.html?category=Musical%20Accessories">Accessories</a></div></div><div class="showcase"><a class="showcase-card showcase-main" href="details.html?id=1"><img src="https://images.unsplash.com/photo-1514119412350-e174d90d280e?auto=format&fit=crop&w=900&q=80" alt="Featured harmonium"><div class="showcase-copy"><strong>Featured Instruments</strong><span>Modern product showcase</span></div></a><a class="showcase-card" href="details.html?id=3"><img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=700&q=80" alt="Tabla"><div class="showcase-copy"><strong>Tabla</strong><span>Stage ready</span></div></a><a class="showcase-card" href="details.html?id=7"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=700&q=80" alt="Guitar"><div class="showcase-copy"><strong>Guitar</strong><span>Popular picks</span></div></a></div></div></div></div></section><section class="section compact"><div class="container"><div class="section-head"><div><span class="eyebrow">Featured products</span><h2 class="section-title">Popular items from your catalog</h2><p class="section-copy">These come directly from script.js featured products.</p></div><a class="btn btn-soft" href="products.html">Full catalog</a></div><div class="product-grid" id="featuredProducts"></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Categories</span><h2 class="section-title">Shop by instrument type</h2><p class="section-copy">Direct links to filtered catalog pages.</p></div><a class="btn btn-soft" href="categories.html">Open categories</a></div><div class="grid grid-categories home-categories-grid" id="homeCategories"></div></div></section><section class="section compact"><div class="container"><div class="home-cta"><div><span class="eyebrow light">Store information</span><h2 data-store-fullname>Shri Samarth Krupa Musical & Electronics</h2><p data-address></p><div class="contact-badges"><span data-phone-one></span><span data-phone-two></span><span data-tagline></span></div></div><div class="inline-actions"><a class="btn btn-light" data-whatsapp-link target="_blank" rel="noopener" href="#">WhatsApp now</a><a class="btn btn-outline" href="contact.html">Full contact details</a></div></div></div></section></main><footer class="site-footer"><div class="container footer-inner"><div>© 2026 <span data-store-fullname></span></div><div class="footer-links"><a href="index.html">Home</a><a href="products.html">Products</a><a href="contact.html">Contact</a><a href="admin.html">Admin</a></div></div></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Samarth Krupa Musical</title>
+  <meta name="description" content="Modern product showcase website for Shri Samarth Krupa Musical" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">♫</span>
+        <span>Shri Samarth Krupa Musical</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+
+      <div class="nav-menu">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="categories.html" data-page="categories">Categories</a></li>
+            <li><a href="products.html" data-page="products">Products</a></li>
+            <li><a href="details.html" data-page="details">Details</a></li>
+            <li><a href="contact.html" data-page="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" title="Wishlist"><span>♡</span><span class="count red" data-wishlist-count>0</span></button>
+          <button class="icon-btn" id="catalogOnlyBtn" title="Display only"><span>👜</span><span class="count blue">0</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero home-hero">
+      <div class="container">
+        <div class="hero-shell clean-hero">
+          <div class="hero-grid hero-grid-clean">
+            <div class="hero-content hero-content-clean">
+              <span class="hero-chip">Curated musical catalog</span>
+              <h1 class="hero-title">Beautiful instruments. Clean browsing. Direct WhatsApp inquiries.</h1>
+              <p class="hero-copy">A simpler home page focused on your products. Visitors can explore categories, open details, and contact you directly without any checkout flow.</p>
+
+              <div class="hero-actions">
+                <a class="btn btn-light" href="products.html">Browse Products</a>
+                <a class="btn btn-outline" href="contact.html">Contact Store</a>
+              </div>
+
+              <div class="hero-points">
+                <span>6 categories</span>
+                <span>Mobile friendly</span>
+                <span>Direct WhatsApp flow</span>
+              </div>
+
+              <div class="hero-quick-links">
+                <a class="quick-link" href="products.html?category=Harmonium">Harmonium</a>
+                <a class="quick-link" href="products.html?category=Tabla">Tabla</a>
+                <a class="quick-link" href="products.html?category=Keyboard">Keyboard</a>
+                <a class="quick-link" href="products.html?category=Guitar">Guitar</a>
+                <a class="quick-link" href="products.html?category=Dholak">Dholak</a>
+                <a class="quick-link" href="products.html?category=Musical%20Accessories">Accessories</a>
+              </div>
+            </div>
+
+            <div class="hero-showcase">
+              <a class="showcase-card showcase-main" href="details.html?id=1">
+                <img src="https://images.unsplash.com/photo-1514119412350-e174d90d280e?auto=format&fit=crop&w=900&q=80" alt="Featured harmonium" loading="lazy">
+                <div class="showcase-copy">
+                  <strong>Featured Harmonium</strong>
+                  <span>Classic collection</span>
+                </div>
+              </a>
+              <a class="showcase-card" href="details.html?id=3">
+                <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=700&q=80" alt="Featured tabla" loading="lazy">
+                <div class="showcase-copy">
+                  <strong>Tabla</strong>
+                  <span>Stage ready</span>
+                </div>
+              </a>
+              <a class="showcase-card" href="details.html?id=7">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=700&q=80" alt="Featured guitar" loading="lazy">
+                <div class="showcase-copy">
+                  <strong>Guitar</strong>
+                  <span>Popular picks</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container">
+        <div class="section-head compact-head">
+          <div>
+            <span class="eyebrow">Featured products</span>
+            <h2 class="section-title">Popular items from your catalog</h2>
+            <p class="section-copy">Your product cards now appear much earlier on the home page.</p>
+          </div>
+          <a class="btn btn-soft" href="products.html">Full catalog</a>
+        </div>
+        <div class="product-grid featured-grid" id="featuredProducts"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head compact-head">
+          <div>
+            <span class="eyebrow">Categories</span>
+            <h2 class="section-title">Shop by instrument type</h2>
+            <p class="section-copy">Direct links to filtered catalog pages for faster browsing.</p>
+          </div>
+          <a class="btn btn-soft" href="categories.html">Open categories</a>
+        </div>
+        <div class="grid grid-categories home-categories-grid" id="homeCategories"></div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container">
+        <div class="home-cta home-cta-rich">
+          <div>
+            <span class="eyebrow light">Store information</span>
+            <h2>Shri Samarth Krupa Musical &amp; Electronics</h2>
+            <p>Main Road, Raver, District Jalgaon (MH), Pincode 425508. All kinds of musical instruments available with wholesaler and retailer support, plus sales and service.</p>
+            <div class="contact-badges">
+              <span>Call: 9359776263</span>
+              <span>Call: 9405724793</span>
+              <span>Amazon</span>
+              <span>Flipkart</span>
+              <span>Meesho</span>
+            </div>
+          </div>
+          <div class="inline-actions">
+            <a class="btn btn-light" target="_blank" rel="noopener" href="https://wa.me/918308651469?text=Hello%20Shri%20Samarth%20Krupa%20Musical%2C%20I%20want%20to%20know%20more%20about%20your%20products.">WhatsApp now</a>
+            <a class="btn btn-outline" href="contact.html">Full contact details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2026 Shri Samarth Krupa Musical &amp; Electronics • Main Road, Raver, Jalgaon (MH)</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
