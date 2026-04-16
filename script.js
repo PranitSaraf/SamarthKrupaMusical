@@ -138,13 +138,27 @@ const PRODUCTS = [
     name: "Studio Vocal Microphone",
     category: "Musical Accessories",
     price: 3999,
-    oldPrice: 4699,
+    oldPrice: 4999,
     badge: "Trending",
     description: "Studio-style microphone accessory for recording, vocals, and content creators.",
     longDescription: "A polished audio accessory for users who want a professional-looking microphone for singing practice, podcasting, or studio display setups.",
     highlights: ["Studio recording look", "Premium accessory option", "Good for creators and vocals"],
     image: "https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?auto=format&fit=crop&w=1200&q=80"
+  },
+
+  {
+     id: 13,
+     name: "DJ",
+     category: "Musical Accessories",
+     price: 190999,
+     oldPrice: 194999,
+     badge: "Trending",
+     description: "Studio-style microphone accessory for recording, vocals, and content creators.",
+     longDescription: "A polished audio accessory for users who want a professional-looking microphone for singing practice, podcasting, or studio display setups.",
+     highlights: ["Studio recording look", "Premium accessory option", "Good for creators and vocals"],
+     image: "https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?auto=format&fit=crop&w=1200&q=80"
   }
+
 ];
 
 const CATEGORIES = [
@@ -170,7 +184,7 @@ function loadWishlist() {
 const state = {
   category: "All",
   search: "",
-  maxPrice: 50000,
+  maxPrice: 5000000,
   sort: "featured",
   wishlistOnly: false,
   selectedId: 1,
